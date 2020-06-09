@@ -108,23 +108,23 @@ _^ Unless it makes sense for that information to be restricted to particular use
 
 > Use the Wireframes section to display desktop, tablet and mobile views.
 
-![Desktop View](https://imgur.com/KqshJq5)
+![Desktop View](https://user-images.githubusercontent.com/64420070/84152404-9437e800-aa32-11ea-920e-5507921b52ae.png)
 
 - Desktop View
 
-![Tablet View](https://imgur.com/ccccbe6)
+![Tablet View](https://user-images.githubusercontent.com/64420070/84152397-91d58e00-aa32-11ea-91c2-e6fb6e54397b.png)
 
 - Tablet View 
 
-![Phone View](https://imgur.com/ccccbe6)
+![Phone View](https://user-images.githubusercontent.com/64420070/84152383-8eda9d80-aa32-11ea-9583-51bc9edce0d7.png)
 
 - Phone View
 
-![Add Book](https://imgur.com/a/NpzAu63)
+![Add Book](https://user-images.githubusercontent.com/64420070/84152430-9dc15000-aa32-11ea-85fb-87ee687be590.png)
 
 - Add Book
 
-![Edit Book](https://imgur.com/5fAoS1A)
+![Edit Book](https://user-images.githubusercontent.com/64420070/84152423-9bf78c80-aa32-11ea-8630-80edce5868b8.png)
 - Edit Book
 
 ![View Book](https://imgur.com/VpPcWjC)
