@@ -119,6 +119,10 @@ _^ Unless it makes sense for that information to be restricted to particular use
 ![Phone View](https://imgur.com/ccccbe6)
 
 - Phone View
+
+![Add Book](https://imgur.com/a/giopd5d)
+
+
 #### Component Tree
 
 > Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
@@ -168,8 +172,18 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Set Up Seed With Data   |    H    |     5 hrs      |     2 hrs     |    3 hrs    |
 | Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Authentication    |    L     |     5 hrs      |     2 hrs     |    3 hrs    |
+| Controllers  |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Verify Back End works  |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Front End Services |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Front End Auth    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Components|    H     |     3 hrs      |     1 hrs     |     TBD     |
+| CSS    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Media Quieres |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Debug    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Deploy |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
 
