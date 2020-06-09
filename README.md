@@ -189,19 +189,19 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Set Up Seed With Data   |    H    |     5 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     5 hrs      |     1 hrs     |     TBD     |
-| Authentication    |    L     |     5 hrs      |     2 hrs     |    3 hrs    |
-| Controllers  |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Verify Back End works  |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Front End Services |    H     |     5 hrs      |     1 hrs     |     TBD     |
-| Front End Auth    |    L     |     5 hrs      |     2 hrs     |    3 hrs    |
-| Components|    H     |     16 hrs      |     1 hrs     |     TBD     |
-| CSS    |    L     |     5 hrs      |     2 hrs     |    3 hrs    |
-| Media Quieres |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Debug    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Deploy |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     56 hrs      |     3 hrs     |     TBD     |
+| Set Up Seed With Data   |    H    |     5 hrs      |     TBD    |        |
+| Create CRUD Actions |    H     |     5 hrs      |    TBD     |         |
+| Authentication    |   H     |     5 hrs      |   TBD     |      |
+| Controllers  |    H     |     3 hrs      |     TBD     |          |
+| Verify Back End works  |    H     |     3 hrs      |     TBD     |        |
+| Front End Services |    H     |     5 hrs      |    TBD     |        |
+| Front End Auth    |   H    |     5 hrs      |  TBD     |       |
+| Components|    H     |     16 hrs      |     TBD     |         |
+| CSS    |    H    |     5 hrs      |    TBD     |       |
+| Media Quieres |    H     |     3 hrs      |     TBD     |         |
+| Debug    |    H     |     3 hrs      |    TBD     |        |
+| Deploy |    H     |     3 hrs      |     TBD    |       |
+| TOTAL               |          |     56 hrs      |         |          |
 
 
 
