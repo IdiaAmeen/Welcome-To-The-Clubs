@@ -1,20 +1,5 @@
 # Welcome-To-The-Clubs
 
-- [Overview](#overview)
-- [MVP](#mvp)
-  - [Goals](#goals)
-  - [Libraries](#libraries)
-  - [Client (Front End)](#client-front-end)
-    - [Wireframes](#wireframes)
-    - [Component Tree](#component-tree)
-    - [Component Hierarchy](#component-hierarchy)
-    - [Component Breakdown](#component-breakdown)
-    - [Component Estimates](#component-estimates)
-  - [Server (Back End)](#server-back-end)
-    - [ERD Model](#erd-model)
-- [Post-MVP](#post-mvp)
-- [Code Showcase](#code-showcase)
-- [Code Issues & Resolutions](#code-issues--resolutions)
 
 <br>
 
@@ -143,11 +128,11 @@ _^ Unless it makes sense for that information to be restricted to particular use
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+![Component Tree](https://user-images.githubusercontent.com/64420070/84156371-6903c780-aa37-11ea-8be9-fed07d298d47.png)
 
 #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
+  
 
 ``` structure
 
@@ -160,7 +145,7 @@ src
 |__ components/
       |__ Header.jsx
       |__ Nav.jsx
-      |__ Main.jsx
+      |__ Main.jsx/
       |__ SignUp.jsx
       |__ SignIn.jsx 
       |__ ReadingList.jsx 
