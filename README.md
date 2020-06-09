@@ -20,7 +20,7 @@
 
 ## Overview
 
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_**Welcome To The Clubs** is a website for people to create accounts and join virtual clubs of their interest. The prototype will include a book club with an instructor. It will have the user sign up/sign in , with the ability to add, delete and edit books in the reading list._
 ### Server (Back End) <!-- omit in toc -->
 
 - Have a **RESTful JSON API**.
