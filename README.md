@@ -190,18 +190,18 @@ src
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Set Up Seed With Data   |    H    |     5 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| Create CRUD Actions |    H     |     5 hrs      |     1 hrs     |     TBD     |
 | Authentication    |    L     |     5 hrs      |     2 hrs     |    3 hrs    |
 | Controllers  |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | Verify Back End works  |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Front End Services |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| Front End Auth    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Components|    H     |     3 hrs      |     1 hrs     |     TBD     |
-| CSS    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Front End Services |    H     |     5 hrs      |     1 hrs     |     TBD     |
+| Front End Auth    |    L     |     5 hrs      |     2 hrs     |    3 hrs    |
+| Components|    H     |     16 hrs      |     1 hrs     |     TBD     |
+| CSS    |    L     |     5 hrs      |     2 hrs     |    3 hrs    |
 | Media Quieres |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | Debug    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
 | Deploy |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| TOTAL               |          |     56 hrs      |     3 hrs     |     TBD     |
 
 
 
