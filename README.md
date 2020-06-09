@@ -180,7 +180,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model.
+![Erd](https://ibb.co/TKZ9wCw)
 
 <br>
 
