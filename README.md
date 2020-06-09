@@ -108,7 +108,7 @@ _^ Unless it makes sense for that information to be restricted to particular use
 
 > Use the Wireframes section to display desktop, tablet and mobile views.
 - Desktop View
-![Desktop View](https://user-images.githubusercontent.com/64420070/84152404-9437e800-aa32-11ea-920e-5507921b52ae.png)
+![Desktop View](https://user-images.githubusercontent.com/64420070/84152375-8c784380-aa32-11ea-9ce4-19bb8b159b52.png)
 
 
 - Tablet View 
@@ -127,16 +127,16 @@ _^ Unless it makes sense for that information to be restricted to particular use
 ![Edit Book](https://user-images.githubusercontent.com/64420070/84152423-9bf78c80-aa32-11ea-8630-80edce5868b8.png)
 
 - View Book
-![View Book](https://imgur.com/VpPcWjC)
+![View Book](https://user-images.githubusercontent.com/64420070/84152420-9a2dc900-aa32-11ea-8513-c26876798738.png)
 
 -View Books
-![View books](https://imgur.com/JbGjF4e)
+![View books](https://user-images.githubusercontent.com/64420070/84152413-98640580-aa32-11ea-8705-00ec8c66aea1.png)
 
 -Sign In
-![Sign In](https://imgur.com/VCRVknp)
+![Sign In](https://user-images.githubusercontent.com/64420070/84152409-969a4200-aa32-11ea-98ab-d082fbcf70e3.png)
 
 -Sign Up
-![SignUp](https://imgur.com/393qNbf)
+![SignUp](https://user-images.githubusercontent.com/64420070/84152435-a023aa00-aa32-11ea-8152-8eb7609a20c8.png)
 
 
 
@@ -211,7 +211,7 @@ src
 
 #### ERD Model
 
-![Erd](https://ibb.co/TKZ9wCw)
+![Erd](https://user-images.githubusercontent.com/64420070/84152404-9437e800-aa32-11ea-920e-5507921b52ae.png)
 
 <br>
 
