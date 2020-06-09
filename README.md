@@ -112,13 +112,13 @@ _^ Unless it makes sense for that information to be restricted to particular use
 
 - Desktop View
 
-![Tablet View](https://imgur.com/0KSwEao)
+![Tablet View](https://imgur.com/ccccbe6)
 
 - Tablet View 
 
 ![Phone View](https://imgur.com/ccccbe6)
 
-
+- Phone View
 #### Component Tree
 
 > Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
