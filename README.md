@@ -120,7 +120,24 @@ _^ Unless it makes sense for that information to be restricted to particular use
 
 - Phone View
 
-![Add Book](https://imgur.com/a/giopd5d)
+![Add Book](https://imgur.com/a/NpzAu63)
+
+- Add Book
+
+![Edit Book](https://imgur.com/5fAoS1A)
+- Edit Book
+
+![View Book](https://imgur.com/VpPcWjC)
+- View Book
+
+![View books](https://imgur.com/JbGjF4e)
+-View Books
+
+![Sign In](https://imgur.com/VCRVknp)
+-Sign In
+
+![SignUp](https://imgur.com/393qNbf)
+-Sign Up
 
 
 #### Component Tree
