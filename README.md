@@ -138,7 +138,8 @@ _^ Unless it makes sense for that information to be restricted to particular use
 -Sign Up
 ![SignUp](https://user-images.githubusercontent.com/64420070/84152435-a023aa00-aa32-11ea-8152-8eb7609a20c8.png)
 
-
+-Delete
+![DeleteBook](https://user-images.githubusercontent.com/64420070/84154834-951e4900-aa35-11ea-9e11-11dbb14a48be.png)
 
 #### Component Tree
 
