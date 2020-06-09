@@ -108,29 +108,16 @@ _^ Unless it makes sense for that information to be restricted to particular use
 
 > Use the Wireframes section to display desktop, tablet and mobile views.
 
-![Dummy Link](url)
+![Desktop View](https://imgur.com/KqshJq5)
 
-- Desktop Landing
+- Desktop View
 
-![Dummy Link](url)
+![Tablet View](https://imgur.com/0KSwEao)
 
-- Desktop Hero
+- Tablet View 
 
-![Dummy Link](url)
+![Phone View](https://imgur.com/ccccbe6)
 
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Tree
 
