@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_11_000018) do
+ActiveRecord::Schema.define(version: 2020_06_11_141637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2020_06_11_000018) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "author"
     t.string "description"
+    t.string "image"
+    t.string "link"
     t.index ["club_id"], name: "index_books_on_club_id"
   end
 
