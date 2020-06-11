@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Book.destroy_all
+Club.destroy_all
+User.destroy_all
+
 
 @user = User.create!(username: 'Idi', email: 'idiwashere@gmail.com', password: '123456')
 @club = Club.create(name: 'Book Club', user: @user )
