@@ -1,46 +1,57 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import Main from "./Main";
 import SignUp from "./SignUp";
-import SignIn from "./SignIn";
-import Clubs from "./Clubs";
-import { readAllClubs } from "./services/clubs";
-import { readAllBooks } from "./services/books";
+import {
+  loginUser,
+  registerUser,
+  removeToken,
+  verifyUser,
+} from "./services/auth";
+
 export default class App extends Component {
-  state = {
-    clubs: [],
-    books: [],
-  };
-  componentDidMount() {
-    this.getClubs();
-    this.getBooks();
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentUser: null,
+    };
   }
-  getClubs = async () => {
-    const clubs = await readAllClubs();
-    this.setState({ clubs });
-  };
-  getBooks = async () => {
-    const books = await readAllBooks();
-    this.setState({ books });
+  componentDidMount() {
+    this.handleVerify();
+  }
+
+  handleLoginSubmit = async (loginData) => {
+    const currentUser = await loginUser(loginData);
+    this.setState({ currentUser });
   };
 
+  handleSignUpSubmit = async (registerData) => {
+    const currentUser = await registerUser(registerData);
+    this.setState({ currentUser });
+  };
+
+  handleLogout = () => {
+    this.setState({
+      currentUser: null,
+    });
+    localStorage.clear();
+    removeToken();
+  };
+
+  handleVerify = async () => {
+    const currentUser = await verifyUser();
+    this.setState({ currentUser });
+  };
   render() {
-    console.log(this.state.clubs);
-    console.log(this.state.books);
-    return (
-      <>
-        Hello World
-        <SignUp />
-        <Route
-          exact
-          path="/clubs"
-          render={() => <Clubs clubs={this.state.clubs} />}
+    if (this.state.currentUser == null) {
+      return (
+        <SignUp
+          handleLoginSubmit={this.handleLoginSubmit}
+          handleSignUpSubmit={this.handleSignUpSubmit}
+          currentUser={this.state.currentUser}
         />
-        {/* <Route
-          exact
-          path="/books"
-          render={() => <Books books={this.state.books} />} */}
-        />
-      </>
-    );
+      );
+    } else {
+      return <Main />;
+    }
   }
 }
