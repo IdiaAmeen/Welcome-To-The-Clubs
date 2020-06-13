@@ -6,9 +6,10 @@ class ViewBook extends Component {
     // this.state = { books: [] };
   }
   render() {
-    let bookview = this.props.books.find((book) => {
-      return this.props.match.params.title === book.title;
-    });
+    let bookview =
+      this.props.books.find((book) => {
+        return this.props.match.params.title === book.title;
+      }) || {};
     return (
       <div key={bookview.title}>
         <h1>{bookview.title}</h1>

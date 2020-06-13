@@ -44,7 +44,7 @@ export default class Main extends Component {
       <>
         <Route
           exact
-          path="/clubs"
+          path="/"
           render={() => <Clubs clubs={this.state.clubs} />}
         />
         <Route
@@ -54,7 +54,7 @@ export default class Main extends Component {
         />
         <Route
           path="/books/:title"
-          render={(props) => <ViewBook {...props} book={this.state.book} />}
+          render={(props) => <ViewBook {...props} books={this.state.books} />}
         />
       </>
     );

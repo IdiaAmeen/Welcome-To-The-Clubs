@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "./SignUp.css";
-export default class SignUp extends Component {
+class SignUp extends Component {
   state = {
     username: "",
     email: "",
@@ -30,7 +30,7 @@ export default class SignUp extends Component {
               e.preventDefault();
               handleSignUpSubmit(this.state);
               history.push("/");
-              //redirect
+
               this.setState({
                 username: "",
                 email: "",
@@ -84,3 +84,4 @@ export default class SignUp extends Component {
     );
   }
 }
+export default withRouter(SignUp);

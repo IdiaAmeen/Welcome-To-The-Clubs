@@ -12,7 +12,7 @@ export default function Header(props) {
 
         {
           <>
-            <p> Hello, {props.currentUser}</p>
+            <p> Hello, {props.currentUser.username}</p>
             <button onClick={props.handleLogout}>Logout</button>
           </>
         }

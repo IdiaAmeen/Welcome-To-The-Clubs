@@ -61,7 +61,7 @@ export default class App extends Component {
             render={(props) => (
               <SignIn
                 {...props}
-                handleLoginSubmit={this.props.handleLoginSubmit}
+                handleLoginSubmit={this.handleLoginSubmit}
                 currentUser={this.state.currentUser}
               />
             )}
