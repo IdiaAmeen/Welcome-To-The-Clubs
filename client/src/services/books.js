@@ -1,6 +1,6 @@
 import api from "./api-helper";
-export const createBook = async (data) => {
-  const resp = await api.post("/books", { book: data });
+export const createBook = async (data, club_id) => {
+  const resp = await api.post(`/clubs/${club_id}/books`, { book: data });
   return resp.data;
 };
 

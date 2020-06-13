@@ -7,7 +7,7 @@ export default function Clubs(props) {
     <>
       {clubs.map((club) => (
         <React.Fragment key={club.name}>
-          <Link to="/books">
+          <Link to={`${club.id}/books`}>
             {" "}
             <p>{club.name}</p>
           </Link>

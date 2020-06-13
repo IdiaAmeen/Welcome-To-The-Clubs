@@ -15,8 +15,9 @@ class BooksController < ApplicationController
 
   # POST /books
   def create
+    @club = Club.find(params[:club_id])
     @book = Book.new(book_params)
-
+@book.club = @club
     if @book.save
       render json: @book, status: :created, location: @book
     else
@@ -46,6 +47,6 @@ class BooksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def book_params
-      params.require(:book).permit(:name, :club_id)
+      params.require(:book).permit( :club_id, :title, :author, :description, :image,:link)
     end
 end

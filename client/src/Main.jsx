@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, withRouter } from "react-router-dom";
 import Books from "./Books";
 import Clubs from "./Clubs";
 import ViewBook from "./ViewBook";
@@ -13,7 +13,7 @@ import {
   readBook,
 } from "./services/books";
 
-export default class Main extends Component {
+class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,20 +34,21 @@ export default class Main extends Component {
     const books = await readAllBooks();
     this.setState({ books });
   };
-  removeBook = async () => {
-    const books = await destroyBook();
-    this.setState({ books });
-  };
-  postBook = async (bookData) => {
-    const newBook = await createBook(bookData);
+  removeBook = async (bookId) => {
+    const nixBook = await destroyBook(bookId);
     this.setState((prevState) => ({
-      foods: [...prevState.books, newBook],
+      books: prevState.books.filter((books) => books.id !== bookId),
+    }));
+    this.props.history.push(`/:clubId/books`);
+  };
+  postBook = async (bookData, clubId) => {
+    const newBook = await createBook(bookData, clubId);
+    this.setState((prevState) => ({
+      books: [...prevState.books, newBook],
     }));
   };
 
   render() {
-    console.log(this.state.clubs);
-    console.log(this.state.books);
     return (
       <>
         <Route
@@ -57,20 +58,27 @@ export default class Main extends Component {
         />
         <Route
           exact
-          path="/books"
-          render={() => (
-            <Books books={this.state.books} removeBook={this.removeBook} />
+          path="/:clubId/books"
+          render={(props) => <Books {...props} books={this.state.books} />}
+        />
+        <Route
+          path="/:clubId/books/:title"
+          render={(props) => (
+            <ViewBook
+              {...props}
+              books={this.state.books}
+              removeBook={this.removeBook}
+            />
           )}
         />
         <Route
-          path="/books/:title"
-          render={(props) => <ViewBook {...props} books={this.state.books} />}
-        />
-        <Route
-          path="/newbook"
+          path="/:clubId/books/newbook"
           render={(props) => <CreateBook {...props} postBook={this.postBook} />}
         />
       </>
     );
   }
 }
+
+// Link to =`/${clubId}/books/newbook`
+export default withRouter(Main);

@@ -30,7 +30,14 @@ class ViewBook extends Component {
           </div>
           <div className="crud-buttons">
             <button className="edit">Edit</button>
-            <button className="delete">Delete</button>
+            <button
+              onClick={() => {
+                this.props.removeBook(bookview.id);
+              }}
+              className="delete"
+            >
+              Delete
+            </button>
           </div>
         </div>
       </>

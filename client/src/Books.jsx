@@ -3,7 +3,7 @@ import "./Books.css";
 import { Link, Route } from "react-router-dom";
 export default function Books(props) {
   const { books } = props;
-
+  const { clubId } = props.match.params;
   return (
     <>
       <div className="book-club">
@@ -17,12 +17,15 @@ export default function Books(props) {
             <img src={book.image} alt={book.title} />
           </div>
           <div className="viewbook">
-            <Link to={"/books/" + book.title} className="text">
+            <Link to={`/${clubId}/books/${book.title}`} className="text">
               View
             </Link>
           </div>
         </React.Fragment>
       ))}
+      <Link to={`/${clubId}/books/newbook`}>
+        <button>New Book</button>
+      </Link>
     </>
   );
 }

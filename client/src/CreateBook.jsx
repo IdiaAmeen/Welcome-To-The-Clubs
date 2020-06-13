@@ -19,12 +19,13 @@ export default class CreateBook extends Component {
   render() {
     const { title, author, description, image, link } = this.state;
     const { postBook, history } = this.props;
+    const { clubId } = this.props.match.params;
     return (
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          postBook(this.state);
-          history.push("/books");
+          postBook(this.state, clubId);
+          history.push(`/${clubId}/books`);
           this.setState({
             title: "",
             author: "",
