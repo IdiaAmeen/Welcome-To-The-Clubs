@@ -15,11 +15,11 @@ export default function Books(props) {
             <p>{book.title}</p>
 
             <img src={book.image} alt={book.title} />
-            <div className="viewbook">
-              <Link to={"/books/" + book.title} className="text">
-                View
-              </Link>
-            </div>
+          </div>
+          <div className="viewbook">
+            <Link to={"/books/" + book.title} className="text">
+              View
+            </Link>
           </div>
         </React.Fragment>
       ))}

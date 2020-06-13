@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Clubs";
 export default function Clubs(props) {
   const { clubs } = props;
   return (

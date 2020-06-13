@@ -42,7 +42,6 @@ export default class Main extends Component {
     console.log(this.state.books);
     return (
       <>
-        Hello World
         <Route
           exact
           path="/clubs"
