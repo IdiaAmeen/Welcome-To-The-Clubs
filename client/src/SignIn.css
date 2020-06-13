@@ -1,0 +1,35 @@
+.return {
+  color: white;
+  font: 30px;
+  margin-left: 70px;
+  margin-bottom: 0px;
+  margin-top: 30px;
+  font-size: 18px;
+}
+.login {
+  border: 1px #9370db;
+  /* border-radius: */
+}
+.login-credentials {
+  background-color: #f1dcf2;
+  height: 150px;
+  width: 250px;
+  margin-left: 17px;
+  padding-top: 10px;
+  border: 2px solid #9370db;
+  padding-left: 12px;
+  font-size: large;
+  border-radius: 12px;
+  margin-top: 20px;
+  color: #9370db;
+}
+.button {
+  border-radius: 12px;
+  margin-left: 70px;
+  margin-top: 90px;
+  height: 45px;
+  width: 85px;
+  font-size: 18px;
+  background-color: #f1dcf2;
+  color: #9370db;
+}

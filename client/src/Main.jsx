@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import Books from "./Books";
 import Clubs from "./Clubs";
 import ViewBook from "./ViewBook";
+import CreateBook from "./CreateBook";
 import { readAllClubs } from "./services/clubs";
 import {
   readAllBooks,
@@ -18,7 +19,7 @@ export default class Main extends Component {
     this.state = {
       clubs: [],
       books: [],
-      book: [],
+      // book: [],
     };
   }
   componentDidMount() {
@@ -33,10 +34,17 @@ export default class Main extends Component {
     const books = await readAllBooks();
     this.setState({ books });
   };
-  getBook = async () => {
-    const book = await readBook();
-    this.setState({ book });
+  removeBook = async () => {
+    const books = await destroyBook();
+    this.setState({ books });
   };
+  postBook = async (bookData) => {
+    const newBook = await createBook(bookData);
+    this.setState((prevState) => ({
+      foods: [...prevState.books, newBook],
+    }));
+  };
+
   render() {
     console.log(this.state.clubs);
     console.log(this.state.books);
@@ -50,11 +58,17 @@ export default class Main extends Component {
         <Route
           exact
           path="/books"
-          render={() => <Books books={this.state.books} />}
+          render={() => (
+            <Books books={this.state.books} removeBook={this.removeBook} />
+          )}
         />
         <Route
           path="/books/:title"
           render={(props) => <ViewBook {...props} books={this.state.books} />}
+        />
+        <Route
+          path="/newbook"
+          render={(props) => <CreateBook {...props} postBook={this.postBook} />}
         />
       </>
     );

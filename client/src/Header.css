@@ -1,0 +1,13 @@
+.header {
+  background-color: #9370db;
+  color: white;
+  height: 150px;
+}
+.site-name {
+}
+.header-menu {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}

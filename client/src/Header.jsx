@@ -1,21 +1,23 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
+import "./Header.css";
+import SignIn from "./SignIn";
 // import { Link, NavLink } from 'react-router-dom';
 
 export default function Header(props) {
   if (props.currentUser === null) {
-    return <Redirect to="/" />;
+    return <SignIn />;
   } else {
     return (
-      <div>
-        <h1>Welcome To The Clubs</h1>
-
-        {
-          <>
-            <p> Hello, {props.currentUser.username}</p>
-            <button onClick={props.handleLogout}>Logout</button>
-          </>
-        }
+      <div className="header">
+        <div className="site-name">
+          <h1>Welcome To The Clubs</h1>
+        </div>
+        <p> Hello, {props.currentUser.username}</p>
+        <div className="header-menu">
+          <button onClick={props.handleLogout}>Logout</button>
+          <Link to="/">Home</Link>
+        </div>
       </div>
     );
   }

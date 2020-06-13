@@ -25,7 +25,6 @@ class SignUp extends Component {
         <div className="page">
           <div className="join-us">Join the Clubs</div>
           <form
-            className="register-box"
             onSubmit={(e) => {
               e.preventDefault();
               handleSignUpSubmit(this.state);

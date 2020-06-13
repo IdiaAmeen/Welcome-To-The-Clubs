@@ -56,6 +56,7 @@ export default class App extends Component {
               currentUser={this.state.currentUser}
             />
           </Route>
+
           <Route
             path="/signin"
             render={(props) => (

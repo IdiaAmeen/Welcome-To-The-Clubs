@@ -11,7 +11,7 @@ User.destroy_all
 
 
 @user = User.create!(username: 'Idi', email: 'idiwashere@gmail.com', password: '123456')
-@club = Club.create!(name: 'Book Club', user: @user , descripton: '"The Book Club" allows you the access of a reading list full of best-sellers ', image: 'https://img.jakpost.net/c/2019/03/02/2019_03_02_66706_1551461528._large.jpg' )
+@club = Club.create!(name: 'Book Club', user: @user , description: '"The Book Club" allows you the access of a reading list full of best-sellers ', image: 'https://img.jakpost.net/c/2019/03/02/2019_03_02_66706_1551461528._large.jpg' )
 Book.create!(title: 'Becoming', author: 'Michelle Obama', description: 'The former first lady describes her journey from the South Side of Chicago to the White House, and how she balanced work, family and the political ascent of her husband.', image: 'https://m.media-amazon.com/images/I/51QMk4Lt1kL._SL500_.jpg', link: 'https://www.strandbooks.com/product/9781524763138?title=becoming', club: @club)
 Book.create!(title: 'The Mamba Mentality', author: 'Kobe Bryant' , description: 'The former Los Angeles Lakers player describes various skills and techniques he used on the court.', image:'https://prodimage.images-bn.com/pimages/9780374201234_p0_v1_s550x406.jpg', link: 'https://www.strandbooks.com/product/9786070767302?title=mentalidad_mamba__the_mamba_mentality_los_secretos_de_mi_xito', club: @club  )
 Book.create!(title: 'A Tale Of Two Cities', author:'Charles Dickens', description:'The French Revolution comes to vivid life in Charles Dickens’s famous novel about the best of times and the worst of times', image:'https://images1.penguinrandomhouse.com/cover/9780451530578', link: 'https://www.strandbooks.com/product/9780141439600?title=a_tale_of_two_cities', club: @club  )
