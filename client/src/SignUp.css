@@ -1,37 +1,95 @@
+@font-face {
+  font-family: "Bellota", cursive;
+  font-family: "Quicksand", sans-serif;
+  font-family: "Rock Salt", cursive;
+  src: "https://fonts.googleapis.com/css2?family=Bellota:ital,wght@1,400;1,700&family=Quicksand:wght@300&display=swap"
+    rel= "stylesheet";
+  src: "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap";
+}
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: beige;
+  background-color: black;
 }
 .credientials {
-  background-color: beige;
-  height: 150px;
+  background-color: #f1dcf2;
+  height: 250px;
   width: 250px;
-  margin-left: 20px;
+  margin-left: 17px;
   padding-top: 10px;
-  border: 2px solid #ce9613;
-  padding-left: 5px;
+  border: 2px solid #9370db;
+  padding-left: 12px;
   font-size: large;
+  border-radius: 12px;
+  margin-top: 20px;
+  color: #9370db;
 }
 .page {
-  border: 5px solid #ce9613;
+  border: 5px solid #9370db;
   margin-left: 40px;
   margin-right: 60px;
-  margin-top: 50px;
+  margin-top: 45px;
   padding-left: 5px;
-  border-radius: 1%;
-  height: 450px;
+  border-radius: 12px;
+  height: 400px;
   width: 300px;
-  background-color: #f5d997;
+  background-color: black;
+  box-shadow: 5px 5px 5px 5px;
+}
+.title {
+  font: 50px;
+  color: #9370db;
+  padding-left: 20px;
+  padding-top: 5px;
+  /* font-weight: lighter; */
+}
+.join-us {
+  color: white;
+  font: 30px;
+  margin-left: 80px;
+  margin-bottom: 0px;
+  margin-top: 30px;
+  font-size: 18px;
 }
 input[type="text"],
 select,
 textarea {
-  width: 100%;
+  width: 90%;
   padding: 4px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 8px;
   resize: vertical;
+  margin-top: 20px;
+}
+input[type="password"],
+select,
+textarea {
+  width: 90%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  margin-top: 20px;
+}
+.submit {
+  border-radius: 12px;
+  margin-left: 100px;
+  margin-top: 50px;
+  height: 45px;
+  width: 85px;
+  font-size: 18px;
+  background-color: #f1dcf2;
+  color: #9370db;
+}
+p {
+  color: white;
+  margin-left: 50px;
+}
+
+.link {
+  color: #9370db;
+  text-decoration: none;
+  margin-left: 117px;
 }
