@@ -9,6 +9,11 @@ export const readAllBooks = async () => {
   return resp.data;
 };
 
+export const readBook = async (id) => {
+  const resp = await api.get(`/books/${id}`);
+  return resp.data;
+};
+
 export const updateBook = async (id, data) => {
   const resp = await api.put(`/books/${id}`, { book: data });
   return resp.data;

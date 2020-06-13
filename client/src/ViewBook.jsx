@@ -3,11 +3,10 @@ import { withRouter } from "react-router-dom";
 class ViewBook extends Component {
   constructor(props) {
     super(props);
-    this.state = { books: [] };
+    // this.state = { books: [] };
   }
-
   render() {
-    let bookview = books.find((book) => {
+    let bookview = this.props.books.find((book) => {
       return this.props.match.params.title === book.title;
     });
     return (
@@ -26,6 +25,5 @@ class ViewBook extends Component {
     );
   }
 }
-
 const ViewWithRouter = withRouter(ViewBook);
 export default ViewWithRouter;

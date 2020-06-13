@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class Login extends Component {
+export default class SignIn extends Component {
   state = {
     username: "",
     password: "",
@@ -14,6 +14,7 @@ export default class Login extends Component {
   };
 
   render() {
+    console.log(this.props);
     const { username, password } = this.state;
     const { handleLoginSubmit, history } = this.props;
     return (

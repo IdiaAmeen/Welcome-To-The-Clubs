@@ -9,6 +9,7 @@ import {
   createBook,
   updateBook,
   destroyBook,
+  readBook,
 } from "./services/books";
 
 export default class Main extends Component {
@@ -17,6 +18,7 @@ export default class Main extends Component {
     this.state = {
       clubs: [],
       books: [],
+      book: [],
     };
   }
   componentDidMount() {
@@ -31,7 +33,10 @@ export default class Main extends Component {
     const books = await readAllBooks();
     this.setState({ books });
   };
-
+  getBook = async () => {
+    const book = await readBook();
+    this.setState({ book });
+  };
   render() {
     console.log(this.state.clubs);
     console.log(this.state.books);
@@ -50,7 +55,7 @@ export default class Main extends Component {
         />
         <Route
           path="/books/:title"
-          render={(props) => <ViewBook {...props} books={this.state.books} />}
+          render={(props) => <ViewBook {...props} book={this.state.book} />}
         />
       </>
     );

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
+import { Route } from "react-router-dom";
 import Main from "./Main";
 import SignUp from "./SignUp";
+import SignIn from "./SignIn";
+import Header from "./Header";
 import {
   loginUser,
   registerUser,
@@ -42,16 +45,39 @@ export default class App extends Component {
     this.setState({ currentUser });
   };
   render() {
+    console.log(this.state.currentUser);
     if (this.state.currentUser == null) {
       return (
-        <SignUp
-          handleLoginSubmit={this.handleLoginSubmit}
-          handleSignUpSubmit={this.handleSignUpSubmit}
-          currentUser={this.state.currentUser}
-        />
+        <>
+          <Route exact path="/">
+            <SignUp
+              handleLoginSubmit={this.handleLoginSubmit}
+              handleSignUpSubmit={this.handleSignUpSubmit}
+              currentUser={this.state.currentUser}
+            />
+          </Route>
+          <Route
+            path="/signin"
+            render={(props) => (
+              <SignIn
+                {...props}
+                handleLoginSubmit={this.props.handleLoginSubmit}
+                currentUser={this.state.currentUser}
+              />
+            )}
+          />
+        </>
       );
     } else {
-      return <Main />;
+      return (
+        <>
+          <Header
+            currentUser={this.state.currentUser}
+            handleLogout={this.handleLogout}
+          />
+          <Main />;
+        </>
+      );
     }
   }
 }
