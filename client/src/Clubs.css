@@ -1,0 +1,24 @@
+.clubs {
+  border: 1px solid #9370db;
+  height: 350px;
+  margin-top: 20px;
+  padding-bottom: 5px;
+  width: 95%;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+#club-img {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+#club-card {
+  text-decoration: none;
+}
+
+#club-name {
+  margin-left: 120px;
+}
+#description {
+  padding-right: 5px;
+}

@@ -27,7 +27,7 @@ export default class SignIn extends Component {
           />
         </div>
 
-        <div className="page">
+        <div className="this-page">
           <div className="return">
             <h3>Welcome Back!</h3>
           </div>

@@ -69,7 +69,7 @@ class SignUp extends Component {
                   id="password"
                   type="password"
                   name="password"
-                  placeholder="Password"
+                  placeholder="Password: 6+ Characters"
                   value={password}
                   onChange={this.handleChange}
                 />

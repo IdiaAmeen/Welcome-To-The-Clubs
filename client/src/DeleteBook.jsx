@@ -9,7 +9,7 @@ function DeleteBook(props) {
       <>
         <div className="outer-modal">
           <div className="inner-modal">
-            <h3>Are you sure you want to delete {bookView.title}?</h3>
+            <h3 id="sure">Are you sure you want to delete {bookView.title}?</h3>
             <img src={bookView.image} alt={bookView.title} id="image" />
             <div className="options">
               <button

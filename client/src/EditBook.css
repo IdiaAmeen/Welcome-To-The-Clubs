@@ -1,0 +1,35 @@
+.edit-page {
+  width: 90%;
+  margin-left: 20px;
+  padding-left: 30px;
+  margin-top: 10px;
+  z-index: 1;
+  border: 1px solid #9370db;
+  border-radius: 12px;
+  height: 405px;
+}
+.edit-book {
+  margin-left: 85px;
+}
+input[type="text"],
+select,
+textarea {
+  width: 90%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  margin-bottom: 5px;
+  margin-top: 2px;
+}
+
+#edit-submit {
+  height: 30px;
+  margin-left: 85px;
+  margin-top: 10px;
+  margin-bottom: -90px;
+}
+label {
+  color: white;
+  margin-top: 5px;
+}

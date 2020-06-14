@@ -1,7 +1,7 @@
 .return {
   color: white;
   font: 30px;
-  margin-left: 70px;
+  margin-left: 100px;
   margin-bottom: 0px;
   margin-top: 30px;
   font-size: 18px;
@@ -12,9 +12,9 @@
 }
 .login-credentials {
   background-color: #f1dcf2;
-  height: 150px;
+  height: 170px;
   width: 250px;
-  margin-left: 17px;
+  margin-left: 60px;
   padding-top: 10px;
   border: 2px solid #9370db;
   padding-left: 12px;
@@ -32,4 +32,8 @@
   font-size: 18px;
   background-color: #f1dcf2;
   color: #9370db;
+}
+.this-page {
+  border: 1px solid white;
+  height: 600px;
 }

@@ -1,8 +1,9 @@
-.book-view {
+.onebook-view {
   border: 2px solid #9370db;
   border-radius: 12px;
   height: 400px;
   margin-top: 12px;
+  display: visible;
 }
 img {
   height: 175px;

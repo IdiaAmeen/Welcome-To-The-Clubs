@@ -78,7 +78,7 @@ class Main extends Component {
               {...props}
               books={this.state.books}
               removeBook={this.removeBook}
-              putBook={this.putBook}
+              // putBook={this.putBook}
             />
           )}
         />
@@ -87,13 +87,8 @@ class Main extends Component {
           render={(props) => <CreateBook {...props} postBook={this.postBook} />}
         />
         <Route
-          path="/:clubId/books/:id/edit"
+          path="/:clubId/book/:id/edit"
           render={(props) => {
-            // instead of implicitly returning righ away,
-            // we are going to first grab the id of the food we want to update.
-            // Then we are using the .find method to pull that food object
-            // from our foods array in state. We can pass the whole food obj
-            // to our UpdateFood component through props.
             const bookId = props.match.params.id;
             const book = this.state.books.find(
               (book) => book.id === parseInt(bookId)
@@ -101,21 +96,6 @@ class Main extends Component {
             return <EditBook {...props} book={book} putBook={this.putBook} />;
           }}
         />
-        {/* <Route
-          path="/:clubId/books/:title/edit"
-          render={(props) => {
-            const bookId = this.props.match.params.title;
-            const book = this.state.books.find((book) => book.title === bookId);
-            return (
-              <EditBook
-                {...props}
-                book={book}
-                putBook={this.putBook}
-                bookId={bookId}
-              />
-            );
-          }}
-        /> */}
       </>
     );
   }

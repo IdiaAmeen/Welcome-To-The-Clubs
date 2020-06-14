@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
 import DeleteBook from "./DeleteBook";
 import "./ViewBook.css";
-import EditBook from "./EditBook";
+
 class ViewBook extends Component {
   constructor(props) {
     super(props);
@@ -21,15 +21,16 @@ class ViewBook extends Component {
       editOn: !prevState.editOn,
     }));
   };
+
   render() {
     let bookview =
       this.props.books.find((book) => {
         return this.props.match.params.title === book.title;
       }) || {};
-    console.log(this.state.display);
+
     return (
       <>
-        <div key={bookview.title} className="book-view">
+        <div key={bookview.title} className="onebook-view">
           <img src={bookview.image} alt={bookview.title} />
           <h3>{bookview.title}</h3>
 
@@ -45,23 +46,12 @@ class ViewBook extends Component {
             </a>
           </div>
           <div className="crud-buttons">
-            <Link to={`/:clubId/books/${bookview.id}/edit`}>
+            <Link to={`/:clubId/book/${bookview.id}/edit`}>
               <button onClick={this.handleEdit} className="edit">
                 Edit
               </button>
             </Link>
-            {/* <div className="modal">
-              {this.state.editOn && (
-                <EditBook
-                  {...props}
-                  editOn={this.state.editOn}
-                  bookViewId={bookview.id}
-                  removeBook={this.props.removeBook}
-                  handleEdit={this.handleEdit}
-                  bookView={bookview}
-                />
-              )}
-            </div> */}
+
             <button onClick={this.handleClick} className="delete">
               Delete
             </button>
