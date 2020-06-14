@@ -10,7 +10,7 @@ Club.destroy_all
 User.destroy_all
 
 
-@user = User.create!(username: 'Idi', email: 'idiwashere@gmail.com', password: '123456')
+@user = User.create!(username: 'test', email: 'idiwashere@gmail.com', password: '123456')
 @club = Club.create!(name: 'The Book Club', user: @user , description: '"The Book Club" allows you the access of a reading list full of best-sellers! ', image: 'https://img.jakpost.net/c/2019/03/02/2019_03_02_66706_1551461528._large.jpg' )
 Club.create!(name: 'The Cooking Club', user: @user , description:'"The Cooking Club" gives you access to recipes for foodies just like you!', image: 'https://www.netmeds.com/images/cms/wysiwyg/blog/Post/2018/iron_vessels_898.jpg')
 Club.create!(name: 'The News Club', user: @user , description:'"The News Club" lets you read up on current news whenever you want!', image: 'https://startempathy.org/wp-content/uploads/2015/10/Green-Globe-psd448121.jpg')
