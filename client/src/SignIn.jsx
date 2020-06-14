@@ -29,7 +29,7 @@ export default class SignIn extends Component {
 
         <div className="this-page">
           <div className="return">
-            <h3>Welcome Back!</h3>
+            <h3 id="welcome">Welcome Back!</h3>
           </div>
           <div className="login-credentials">
             <form
@@ -67,7 +67,7 @@ export default class SignIn extends Component {
               </label>
               <br />
 
-              <button className="button">Submit</button>
+              <button className="signin-submit">Submit</button>
             </form>
           </div>
         </div>

@@ -15,14 +15,14 @@
 }
 .greeting {
   font-size: 20px;
-  padding-top: 100px;
+  padding-top: 10px;
   padding-left: 75px;
 }
 
 #logout-button {
   background-color: #9370db;
   border: none;
-  margin-top: -40px;
+  margin-top: -50px;
 }
 
 #logout {
