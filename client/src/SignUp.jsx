@@ -21,7 +21,7 @@ class SignUp extends Component {
       <>
         <div className="title">
           <img
-            src="/images/logopurple.png"
+            src={require("./images/logopurple.png")}
             alt="Welcome to The Clubs"
             id="purple-logo"
           />
