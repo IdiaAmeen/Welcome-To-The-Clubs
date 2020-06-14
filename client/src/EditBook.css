@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,300&display=swap");
 .edit-page {
   width: 90%;
   margin-left: 20px;
@@ -8,12 +9,11 @@
   border-radius: 12px;
   height: 405px;
 }
-.edit-book {
+#edit-book {
   margin-left: 85px;
+  font-family: "Montserrat", sans-serif;
 }
-input[type="text"],
-select,
-textarea {
+#edit-text {
   width: 90%;
   padding: 4px;
   border: 1px solid #ccc;
@@ -21,15 +21,27 @@ textarea {
   resize: vertical;
   margin-bottom: 5px;
   margin-top: 2px;
+  font-family: "Montserrat", sans-serif;
 }
 
 #edit-submit {
   height: 30px;
-  margin-left: 85px;
-  margin-top: 10px;
+  margin-left: 35px;
+  margin-top: 25px;
   margin-bottom: -90px;
 }
-label {
+#label {
   color: white;
-  margin-top: 5px;
+  margin-top: px;
+  font-family: "Montserrat", sans-serif;
+}
+#cancel {
+  height: 30px;
+}
+#id {
+  margin-top: 10px;
+}
+
+#book-title {
+  height: 45px;
 }

@@ -57,7 +57,7 @@ export default class SignIn extends Component {
               <br />
               <label htmlFor="password">
                 <input
-                  id="password"
+                  id="sign-password"
                   type="password"
                   name="password"
                   placeholder="Password"

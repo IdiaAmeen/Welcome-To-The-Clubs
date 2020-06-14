@@ -53,12 +53,11 @@ class EditBook extends Component {
             });
           }}
         >
-          <div className="edit book">
-            <h3>Edit Book</h3>
-          </div>
+          <h3 id="edit-book">Edit Book</h3>
+
           <label htmlFor="title">Title:</label>
           <input
-            id="id"
+            id="edit-text"
             type="text"
             value={title}
             name="title"
@@ -67,7 +66,7 @@ class EditBook extends Component {
           />
           <label htmlFor="author">Author:</label>
           <input
-            id="id"
+            id="edit-text"
             type="text"
             value={author}
             name="author"
@@ -75,7 +74,7 @@ class EditBook extends Component {
           />
           <label htmlFor="description">Description:</label>
           <input
-            id="id"
+            id="edit-text"
             type="text"
             value={description}
             name="description"
@@ -83,7 +82,7 @@ class EditBook extends Component {
           />
           <label htmlFor="image">Image:</label>
           <input
-            id="id"
+            id="edit-text"
             type="text"
             value={image}
             name="image"
@@ -91,7 +90,7 @@ class EditBook extends Component {
           />
           <label htmlFor="link">Link:</label>
           <input
-            id="id"
+            id="edit-text"
             type="text"
             value={link}
             name="link"
@@ -103,7 +102,9 @@ class EditBook extends Component {
             onClick={() => {
               history.push("/:clubId/books");
             }}
-          ></button>
+          >
+            Cancel
+          </button>
         </form>
       </div>
     );

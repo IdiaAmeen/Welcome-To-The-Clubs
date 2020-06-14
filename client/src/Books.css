@@ -52,3 +52,14 @@ h2 {
   font-family: "Montserrat", sans-serif;
   margin-left: 20px;
 }
+#titles {
+  height: 25px;
+}
+
+#add-book {
+  height: 45px;
+  float: right;
+  margin-right: 15px;
+  margin-top: -45px;
+  margin-bottom: 20px;
+}

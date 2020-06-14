@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, withRouter } from "react-router-dom";
 import Main from "./Main";
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
@@ -11,7 +11,7 @@ import {
   verifyUser,
 } from "./services/auth";
 
-export default class App extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -76,9 +76,10 @@ export default class App extends Component {
             currentUser={this.state.currentUser}
             handleLogout={this.handleLogout}
           />
-          <Main />;
+          <Main currentUser={this.state.currentUser} />;
         </>
       );
     }
   }
 }
+export default withRouter(App);

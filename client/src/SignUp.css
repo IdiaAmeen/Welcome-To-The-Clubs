@@ -1,11 +1,4 @@
-@font-face {
-  font-family: "Bellota", cursive;
-  font-family: "Quicksand", sans-serif;
-  font-family: "Rock Salt", cursive;
-  src: "https://fonts.googleapis.com/css2?family=Bellota:ital,wght@1,400;1,700&family=Quicksand:wght@300&display=swap"
-    rel= "stylesheet";
-  src: "https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap";
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,300&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -13,7 +6,7 @@
 body {
   background-color: black;
 }
-.credientials {
+.signup-credientials {
   background-color: #f1dcf2;
   height: 250px;
   width: 250px;
@@ -30,7 +23,7 @@ body {
   border: 5px solid #9370db;
   margin-left: 40px;
   margin-right: 60px;
-  margin-top: 110px;
+  margin-top: -5px;
   padding-left: 5px;
   border-radius: 12px;
   height: 400px;
@@ -38,13 +31,7 @@ body {
   background-color: black;
   box-shadow: 5px 5px 5px 5px;
 }
-.title {
-  font: 50px;
-  color: #9370db;
-  padding-left: 20px;
-  padding-top: 5px;
-  /* font-weight: lighter; */
-}
+
 .join-us {
   color: white;
   font: 30px;
@@ -52,10 +39,9 @@ body {
   margin-bottom: 0px;
   margin-top: 30px;
   font-size: 18px;
+  font-family: "Montserrat", sans-serif;
 }
-input[type="text"],
-select,
-textarea {
+#register {
   width: 90%;
   padding: 4px;
   border: 1px solid #ccc;
@@ -63,16 +49,7 @@ textarea {
   resize: vertical;
   margin-top: 20px;
 }
-input[type="password"],
-select,
-textarea {
-  width: 90%;
-  padding: 4px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  resize: vertical;
-  margin-top: 20px;
-}
+
 .submit {
   border-radius: 12px;
   margin-left: 100px;
@@ -82,19 +59,22 @@ textarea {
   font-size: 18px;
   background-color: #f1dcf2;
   color: #9370db;
+  font-family: "Montserrat", sans-serif;
 }
 p {
   color: white;
   margin-left: 50px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .link {
   color: #9370db;
   text-decoration: none;
   margin-left: 117px;
+  font-family: "Montserrat", sans-serif;
 }
 #purple-logo {
-  height: 100px;
+  height: 120px;
   margin-bottom: 30px;
   margin-left: 40px;
 }

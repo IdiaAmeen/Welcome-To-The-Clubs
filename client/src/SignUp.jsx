@@ -41,39 +41,38 @@ class SignUp extends Component {
               });
             }}
           >
-            <div className="credientials">
-              <label htmlFor="username">
-                <input
-                  id="username"
-                  type="text"
-                  name="username"
-                  placeholder="Username"
-                  value={username}
-                  onChange={this.handleChange}
-                />
-              </label>
+            <div className="signup-credientials">
+              <input
+                id="register"
+                type="text"
+                name="username"
+                placeholder="Username"
+                value={username}
+                onChange={this.handleChange}
+              />
+
               <br />
-              <label htmlFor="email">
-                <input
-                  id="email"
-                  type="text"
-                  name="email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={this.handleChange}
-                />
-              </label>
+
+              <input
+                id="register"
+                type="text"
+                name="email"
+                placeholder="Email"
+                value={email}
+                onChange={this.handleChange}
+              />
+
               <br />
-              <label htmlFor="password">
-                <input
-                  id="password"
-                  type="password"
-                  name="password"
-                  placeholder="Password: 6+ Characters"
-                  value={password}
-                  onChange={this.handleChange}
-                />
-              </label>
+
+              <input
+                id="register"
+                type="password"
+                name="password"
+                placeholder="Password: 6+ Characters"
+                value={password}
+                onChange={this.handleChange}
+              />
+
               <br />
             </div>
             <button className="submit">Submit</button>
