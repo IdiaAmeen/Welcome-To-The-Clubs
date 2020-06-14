@@ -42,7 +42,7 @@ export default class CreateBook extends Component {
         >
           <h3 id="add-book">Add Your Favorite Book</h3>
           <input
-            id="id"
+            id="create"
             type="text"
             name="title"
             value={title}
@@ -74,7 +74,7 @@ export default class CreateBook extends Component {
             onChange={this.handleChange}
           />
           <input
-            id="credit"
+            id="create"
             type="text"
             name="link"
             value={link}

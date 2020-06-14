@@ -18,14 +18,17 @@
   margin-left: 20px;
   margin-top: 20px;
   border-radius: 12px;
-  height: 312px;
+  height: 410px;
 }
 #add-book {
   font-family: "Montserrat", sans-serif;
-  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  color: #9370db;
 }
 
 #create-submit {
   margin-left: 125px;
-  margin-bottom: -70px;
+  margin-bottom: 50px;
+  margin-top: -20px;
 }
