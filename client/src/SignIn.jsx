@@ -20,12 +20,16 @@ export default class SignIn extends Component {
     return (
       <>
         <div className="title">
-          <h1>Welcome to The Clubs</h1>
+          <img
+            src="/images/logopurple.png"
+            alt="Welcome to The Clubs"
+            id="purple-logo"
+          />
         </div>
 
         <div className="page">
           <div className="return">
-            <h3>Welcome Back</h3>
+            <h3>Welcome Back!</h3>
           </div>
           <div className="login-credentials">
             <form

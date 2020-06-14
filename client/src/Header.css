@@ -1,13 +1,30 @@
 .header {
   background-color: #9370db;
   color: white;
-  height: 150px;
+  height: 185px;
 }
-.site-name {
+#logo {
+  height: 110px;
+  margin-left: 55px;
 }
 .header-menu {
   float: right;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-decoration: none;
+}
+.greeting {
+  font-size: 20px;
+  padding-top: 100px;
+  padding-left: 75px;
+}
+
+#logout-button {
+  background-color: #9370db;
+  border: none;
+  margin-top: -25px;
+}
+
+#logout {
+  height: 35px;
 }

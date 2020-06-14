@@ -30,7 +30,7 @@ body {
   border: 5px solid #9370db;
   margin-left: 40px;
   margin-right: 60px;
-  margin-top: 45px;
+  margin-top: 110px;
   padding-left: 5px;
   border-radius: 12px;
   height: 400px;
@@ -92,4 +92,9 @@ p {
   color: #9370db;
   text-decoration: none;
   margin-left: 117px;
+}
+#purple-logo {
+  height: 100px;
+  margin-bottom: 30px;
+  margin-left: 40px;
 }

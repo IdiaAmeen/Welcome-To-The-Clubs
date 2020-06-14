@@ -20,7 +20,11 @@ class SignUp extends Component {
     return (
       <>
         <div className="title">
-          <h1>Welcome to The Clubs</h1>
+          <img
+            src="/images/logopurple.png"
+            alt="Welcome to The Clubs"
+            id="purple-logo"
+          />
         </div>
         <div className="page">
           <div className="join-us">Join the Clubs</div>

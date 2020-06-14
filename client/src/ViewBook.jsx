@@ -23,7 +23,7 @@ class ViewBook extends Component {
             <a href={bookview.link}>
               <img
                 className="strand"
-                src="https://pbs.twimg.com/profile_images/1190291192128442370/oaF8H9sl_400x400.jpg"
+                src="/images/strand.png"
                 alt="Link to buy"
               />
             </a>

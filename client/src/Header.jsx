@@ -11,12 +11,21 @@ export default function Header(props) {
     return (
       <div className="header">
         <div className="site-name">
-          <h1>Welcome To The Clubs</h1>
+          <Link to="/">
+            <img
+              src="./images/logowhite1.png"
+              alt="Welcome to The Clubs"
+              id="logo"
+            />
+          </Link>
         </div>
-        <p> Hello, {props.currentUser.username}</p>
+        <div className="greeting">
+          <p> Hello, {props.currentUser.username}!</p>
+        </div>
         <div className="header-menu">
-          <button onClick={props.handleLogout}>Logout</button>
-          <Link to="/">Home</Link>
+          <button onClick={props.handleLogout} id="logout-button">
+            <img src="/images/logout.png" alt="Sign Out" id="logout" />
+          </button>
         </div>
       </div>
     );

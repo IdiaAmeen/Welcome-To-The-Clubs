@@ -9,7 +9,9 @@ export default function Clubs(props) {
         <React.Fragment key={club.name}>
           <Link to={`${club.id}/books`}>
             {" "}
-            <p>{club.name}</p>
+            <h3>{club.name}</h3>
+            <p>{club.description}</p>
+            <img src={club.image} alt={club.name} />
           </Link>
         </React.Fragment>
       ))}
