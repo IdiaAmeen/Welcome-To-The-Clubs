@@ -21,15 +21,15 @@ export default class SignIn extends Component {
       <>
         <div className="title">
           <img
-            src="/images/logopurple.png"
+            src={require("./images/logopurple.png")}
             alt="Welcome to The Clubs"
             id="purple-logo"
           />
         </div>
 
-        <div className="page">
+        <div className="this-page">
           <div className="return">
-            <h3>Welcome Back!</h3>
+            <h3 id="welcome">Welcome Back!</h3>
           </div>
           <div className="login-credentials">
             <form
@@ -57,7 +57,7 @@ export default class SignIn extends Component {
               <br />
               <label htmlFor="password">
                 <input
-                  id="password"
+                  id="sign-password"
                   type="password"
                   name="password"
                   placeholder="Password"
@@ -67,7 +67,7 @@ export default class SignIn extends Component {
               </label>
               <br />
 
-              <button className="button">Submit</button>
+              <button className="signin-submit">Submit</button>
             </form>
           </div>
         </div>

@@ -1,26 +1,34 @@
-import React, { Component } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
-import ViewBook from "./ViewBook";
-class DeleteBook extends Component {
-  state = {
-    display: false,
-  };
-  render() {
-    if (display === false) {
-      return null;
-    } else {
-      return (
-        <>
-          <div className="outer-modal">
-            <div className="inner-modal">
-              <p>Are you sure you want to delete this book?</p>
-              <button>Delete</button>
-              <button>Cancel</button>
+import "./DeleteBook.css";
+function DeleteBook(props) {
+  const { display, bookViewId, handleClick, removeBook, bookView } = props;
+
+  if (display === true) {
+    return (
+      <>
+        <div className="outer-modal">
+          <div className="inner-modal">
+            <h3 id="sure">Are you sure you want to delete {bookView.title}?</h3>
+            <img src={bookView.image} alt={bookView.title} id="image" />
+            <div className="options">
+              <button
+                className="deletebuttons"
+                onClick={() => {
+                  removeBook(bookViewId);
+                }}
+              >
+                Delete
+              </button>
+              <button className="deletebuttons" onClick={handleClick}>
+                Cancel
+              </button>
             </div>
           </div>
-        </>
-      );
-    }
+        </div>
+      </>
+    );
   }
 }
+
 export default withRouter(DeleteBook);

@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,300&display=swap");
+.edit-page {
+  width: 90%;
+  margin-left: 20px;
+  padding-left: 30px;
+  margin-top: 10px;
+  z-index: 1;
+  border: 1px solid #9370db;
+  border-radius: 12px;
+  height: 405px;
+}
+#edit-book {
+  margin-left: 85px;
+  font-family: "Montserrat", sans-serif;
+}
+#edit-text {
+  width: 90%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#edit-submit {
+  height: 30px;
+  margin-left: 35px;
+  margin-top: 25px;
+  margin-bottom: -90px;
+}
+#label {
+  color: white;
+  margin-top: px;
+  font-family: "Montserrat", sans-serif;
+}
+#cancel {
+  height: 30px;
+}
+#id {
+  margin-top: 10px;
+}
+
+#book-title {
+  height: 45px;
+}

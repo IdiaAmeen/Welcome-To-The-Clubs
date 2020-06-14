@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-
-export default class UpdateFood extends Component {
+import { withRouter } from "react-router-dom";
+import "./EditBook.css";
+class EditBook extends Component {
   state = {
     title: "",
     author: "",
@@ -11,56 +12,102 @@ export default class UpdateFood extends Component {
 
   componentDidMount() {
     if (this.props.book) {
-      this.setBook();
+      this.setBookForm();
     }
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.book !== this.props.book) {
-      this.setBook();
+      this.setBookForm();
     }
   }
 
-  setBook = () => {
-    const { name } = this.props.book;
-    this.setState({ name });
+  setBookForm = () => {
+    const { title, author, description, image, link } = this.props.book;
+    this.setState({ title, author, description, image, link });
   };
 
   handleChange = (e) => {
-    const { value } = e.target;
+    const { value, name } = e.target;
     this.setState({
       [name]: value,
     });
   };
 
   render() {
-    const { name } = this.state;
+    const { title, author, description, image, link } = this.state;
     const { putBook, history, book } = this.props;
     return (
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          putBook(book.id, this.state);
-          history.push("/books");
-          this.setState({
-            name: "",
-          });
-        }}
-      >
-        <hr />
-        <h3>Update Food</h3>
-        <label htmlFor="name">Title:</label>
-        <input id="id" type="text" value={name} onChange={this.handleChange} />
-        <label htmlFor="name">Author:</label>
-        <input id="id" type="text" value={name} onChange={this.handleChange} />
-        <label htmlFor="name">Description:</label>
-        <input id="id" type="text" value={name} onChange={this.handleChange} />
-        <label htmlFor="name">Image:</label>
-        <input id="id" type="text" value={name} onChange={this.handleChange} />
-        <label htmlFor="name">Link:</label>
-        <input id="id" type="text" value={name} onChange={this.handleChange} />
-        <button>Submit</button>
-      </form>
+      <div className="edit-page">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            putBook(book.id, this.state);
+            history.push("/:clubId/books");
+            this.setState({
+              title: "",
+              author: "",
+              description: "",
+              image: "",
+              link: "",
+            });
+          }}
+        >
+          <h3 id="edit-book">Edit Book</h3>
+
+          <label htmlFor="title">Title:</label>
+          <input
+            id="edit-text"
+            type="text"
+            value={title}
+            name="title"
+            placeholder={book}
+            onChange={this.handleChange}
+          />
+          <label htmlFor="author">Author:</label>
+          <input
+            id="edit-text"
+            type="text"
+            value={author}
+            name="author"
+            onChange={this.handleChange}
+          />
+          <label htmlFor="description">Description:</label>
+          <input
+            id="edit-text"
+            type="text"
+            value={description}
+            name="description"
+            onChange={this.handleChange}
+          />
+          <label htmlFor="image">Image:</label>
+          <input
+            id="edit-text"
+            type="text"
+            value={image}
+            name="image"
+            onChange={this.handleChange}
+          />
+          <label htmlFor="link">Link:</label>
+          <input
+            id="edit-text"
+            type="text"
+            value={link}
+            name="link"
+            onChange={this.handleChange}
+          />
+          <button id="edit-submit">Submit</button>
+          <button
+            id="cancel"
+            onClick={() => {
+              history.push("/:clubId/books");
+            }}
+          >
+            Cancel
+          </button>
+        </form>
+      </div>
     );
   }
 }
+export default withRouter(EditBook);

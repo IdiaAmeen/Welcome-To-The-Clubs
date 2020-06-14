@@ -13,7 +13,7 @@ export default function Header(props) {
         <div className="site-name">
           <Link to="/">
             <img
-              src="./images/logowhite1.png"
+              src={require("./images/logowhite1.png")}
               alt="Welcome to The Clubs"
               id="logo"
             />
@@ -24,7 +24,11 @@ export default function Header(props) {
         </div>
         <div className="header-menu">
           <button onClick={props.handleLogout} id="logout-button">
-            <img src="/images/logout.png" alt="Sign Out" id="logout" />
+            <img
+              src={require("./images/logout.png")}
+              alt="Sign Out"
+              id="logout"
+            />
           </button>
         </div>
       </div>
