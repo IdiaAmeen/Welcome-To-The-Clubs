@@ -43,7 +43,7 @@ class EditBook extends Component {
           onSubmit={(e) => {
             e.preventDefault();
             putBook(book.id, this.state);
-            history.push("/:clubId/books");
+            history.push("/club/:clubId/books");
             this.setState({
               title: "",
               author: "",
@@ -100,7 +100,7 @@ class EditBook extends Component {
           <button
             id="cancel"
             onClick={() => {
-              history.push("/:clubId/books");
+              history.push("/club/:clubId/books");
             }}
           >
             Cancel

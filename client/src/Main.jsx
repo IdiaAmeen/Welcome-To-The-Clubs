@@ -96,6 +96,7 @@ class Main extends Component {
                 books={this.state.books}
                 removeBook={this.removeBook}
                 currentUser={this.props.currentUser}
+                clubId={this.props.clubId}
                 // putBook={this.putBook}
               />
             )}
@@ -111,7 +112,7 @@ class Main extends Component {
           ​
           <Route
             exact
-            path="/:clubId/book/:id/edit"
+            path="/:clubId/:id/edit"
             render={(props) => (
               <EditBook {...props} book={book} putBook={this.putBook} />
             )}
