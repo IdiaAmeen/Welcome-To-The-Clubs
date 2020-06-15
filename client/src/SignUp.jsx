@@ -6,6 +6,9 @@ class SignUp extends Component {
     username: "",
     email: "",
     password: "",
+    verifyPassword: "",
+    error: false,
+    hidden: true,
   };
   handleChange = (e) => {
     const { name, value } = e.target;
@@ -13,9 +16,26 @@ class SignUp extends Component {
       [name]: value,
     });
   };
+  handleError = () => {
+    this.setState(() => ({
+      error: true,
+    }));
+  };
+  handleView = () => {
+    this.setState((prevState) => ({
+      hidden: !prevState.hidden,
+    }));
+  };
 
   render() {
-    const { username, email, password } = this.state;
+    const {
+      username,
+      email,
+      password,
+      verifyPassword,
+      error,
+      hidden,
+    } = this.state;
     const { handleSignUpSubmit, history } = this.props;
     return (
       <>
@@ -31,14 +51,18 @@ class SignUp extends Component {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              handleSignUpSubmit(this.state);
-              history.push("/");
+              if (password === verifyPassword) {
+                handleSignUpSubmit(this.state);
+                history.push("/");
 
-              this.setState({
-                username: "",
-                email: "",
-                password: "",
-              });
+                this.setState({
+                  username: "",
+                  email: "",
+                  password: "",
+                });
+              } else {
+                this.handleError();
+              }
             }}
           >
             <div className="signup-credientials">
@@ -66,15 +90,34 @@ class SignUp extends Component {
 
               <input
                 id="register"
-                type="password"
+                type={this.state.hidden ? "password" : "text"}
                 name="password"
                 placeholder="Password: 6+ Characters"
                 value={password}
                 onChange={this.handleChange}
               />
+              <input
+                id="register"
+                type={this.state.hidden ? "password" : "text"}
+                name="verifyPassword"
+                placeholder="Verify Password"
+                value={verifyPassword}
+                onChange={this.handleChange}
+              />
 
               <br />
+              <button onClick={this.handleView} id="eye-container">
+                {" "}
+                <img
+                  src={require("./images/eye1.png")}
+                  alt="See Password"
+                  id="eye"
+                />{" "}
+              </button>
             </div>
+            {this.state.error && (
+              <div className="no-match">Please enter matching passwords</div>
+            )}
             <button className="submit">Submit</button>
           </form>
           <p>Already have an Account?</p>

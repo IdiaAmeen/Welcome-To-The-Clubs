@@ -66,6 +66,7 @@ class ViewBook extends Component {
                     putBook={this.props.putBook}
                     handleClick={this.handleClick}
                     bookView={bookview}
+                    removeBook={this.props.removeBook}
                   />
                 )}
               </div>
