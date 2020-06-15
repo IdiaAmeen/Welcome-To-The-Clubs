@@ -28,3 +28,11 @@
 
   height: 50px;
 }
+@media (min-width: 765px) {
+  #club-img {
+    height: 275px;
+    float: left;
+  }
+  .clubs {
+  }
+}

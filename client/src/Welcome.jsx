@@ -9,6 +9,7 @@ export default class Welcome extends Component {
       display: false,
     }));
   };
+
   render() {
     if (this.state.display === true) {
       return (
