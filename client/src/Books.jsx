@@ -9,13 +9,15 @@ export default function Books(props) {
     <>
       <div className="book-club">
         <h2>The Book Club</h2>
-        <Link to={`/${clubId}/book/newbook`}>
-          <img
-            src={require("./images/addbook.png")}
-            alt="Add Book"
-            id="add-book"
-          />
-        </Link>
+        {currentUser && (
+          <Link to={`/${clubId}/book/newbook`}>
+            <img
+              src={require("./images/addbook.png")}
+              alt="Add Book"
+              id="add-book"
+            />
+          </Link>
+        )}
       </div>
       {books.map((book) => (
         <React.Fragment key={book.title}>
