@@ -66,6 +66,7 @@ class App extends Component {
             />
           )}
         />
+        {/* have main and header not render for signup and signin */}
         <Header
           currentUser={this.state.currentUser}
           handleLogout={this.handleLogout}

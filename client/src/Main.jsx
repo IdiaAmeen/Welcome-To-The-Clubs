@@ -60,40 +60,55 @@ class Main extends Component {
   };
 
   render() {
+    const { currentUser } = this.props;
     return (
       <>
-        <Route path="/" render={() => <Clubs clubs={this.state.clubs} />} />
-        <Route exact path="/" render={() => <Welcome />} />
         <Route
           exact
-          path="/:clubId/books"
-          render={(props) => <Books {...props} books={this.state.books} />}
+          path="/"
+          render={() => <Clubs clubs={this.state.clubs} />}
         />
-        <Route
-          path="/:clubId/books/:title"
-          render={(props) => (
-            <ViewBook
-              {...props}
-              books={this.state.books}
-              removeBook={this.removeBook}
-              // putBook={this.putBook}
-            />
-          )}
-        />
-        <Route
-          path="/:clubId/book/newbook"
-          render={(props) => <CreateBook {...props} postBook={this.postBook} />}
-        />
-        <Route
-          path="/:clubId/book/:id/edit"
-          render={(props) => {
-            const bookId = props.match.params.id;
-            const book = this.state.books.find(
-              (book) => book.id === parseInt(bookId)
-            );
-            return <EditBook {...props} book={book} putBook={this.putBook} />;
-          }}
-        />
+        <Route exact path="/" render={() => <Welcome />} />
+
+        {currentUser && (
+          <Route
+            path="/:clubId/books"
+            render={(props) => <Books {...props} books={this.state.books} />}
+          />
+        )}
+        {currentUser && (
+          <Route
+            path="/:clubId/books/:title"
+            render={(props) => (
+              <ViewBook
+                {...props}
+                books={this.state.books}
+                removeBook={this.removeBook}
+                // putBook={this.putBook}
+              />
+            )}
+          />
+        )}
+        {currentUser && (
+          <Route
+            path="/:clubId/book/newbook"
+            render={(props) => (
+              <CreateBook {...props} postBook={this.postBook} />
+            )}
+          />
+        )}
+        {currentUser && (
+          <Route
+            path="/:clubId/book/:id/edit"
+            render={(props) => {
+              const bookId = props.match.params.id;
+              const book = this.state.books.find(
+                (book) => book.id === parseInt(bookId)
+              );
+              return <EditBook {...props} book={book} putBook={this.putBook} />;
+            }}
+          />
+        )}
       </>
     );
   }
