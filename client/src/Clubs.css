@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,300&display=swap");
 .clubs {
   border: 1px solid #9370db;
   height: 350px;
@@ -22,17 +23,52 @@
 
 #club-name {
   margin-left: 105px;
+  font-family: "Montserrat", sans-serif;
 }
 #club-description {
   padding-right: 5px;
 
   height: 50px;
+  font-family: "Montserrat", sans-serif;
 }
-@media (min-width: 765px) {
+@media (min-width: 992px) {
+  @keyframes example {
+    from {
+      left: 0px;
+    }
+    to {
+      left: 200px;
+    }
+  }
+  /* .clubs {
+    animation-timing-function: ease;
+  } */
   #club-img {
-    height: 275px;
-    float: left;
+    height: 350px;
+    width: 750px;
+    opacity: 0.6;
+    margin-top: -120px;
+    margin-left: 1px;
   }
   .clubs {
+    width: 750px;
+    margin-left: 130px;
+
+    border: 4px solid #9370db;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  #club-name {
+    font-size: large;
+    margin-left: 700px;
+  }
+  .club-boxes {
+    display: flex;
+    flex-grow: 6;
+    flex-direction: column;
+    overflow-x: scroll;
+  }
+  #club-description {
+    display: none;
   }
 }

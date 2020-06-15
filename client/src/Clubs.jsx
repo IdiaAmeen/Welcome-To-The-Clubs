@@ -5,7 +5,7 @@ export default function Clubs(props) {
   const { clubs, currentUser } = props;
 
   return (
-    <>
+    <div className="club-boxes">
       {clubs.map((club) => (
         <div className="clubs" key={club.name}>
           <Link to={`/club/${club.id}/books`} id="club-card">
@@ -16,6 +16,6 @@ export default function Clubs(props) {
           </Link>
         </div>
       ))}
-    </>
+    </div>
   );
 }
