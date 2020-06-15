@@ -13,7 +13,7 @@ body {
   margin-left: 45px;
   margin-bottom: 5px;
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
   text-decoration: none;
 }
 .books img {
@@ -33,6 +33,8 @@ p {
   color: white;
   font-family: "Montserrat", sans-serif;
   margin-left: 75px;
+  margin-top: 25px;
+  display: flex;
 }
 .viewbook {
   border-radius: 12px;
@@ -58,11 +60,13 @@ h2 {
 }
 
 #add-book {
-  height: 45px;
+  height: 65px;
+  width: 45px;
   float: right;
-  margin-right: 15px;
-  margin-top: -45px;
-  margin-bottom: 20px;
+  margin-left: 18px;
+  margin-top: -35px;
+  margin-bottom: 10px;
+  /* border: 1px solid red; */
 }
 
 @media (min-width: 992px) {
@@ -114,5 +118,9 @@ h2 {
   #titles {
     height: 20px;
     padding-bottom: 10px;
+  }
+  #add-book {
+    margin-left: 505px;
+    margin-bottom: 10px;
   }
 }

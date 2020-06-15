@@ -78,7 +78,13 @@ class Main extends Component {
           ​
           <Route
             path="/club/:clubId/books"
-            render={(props) => <Books {...props} books={this.state.books} />}
+            render={(props) => (
+              <Books
+                {...props}
+                books={this.state.books}
+                currentUser={this.props.currentUser}
+              />
+            )}
           />
           ​
           <Route
@@ -97,7 +103,7 @@ class Main extends Component {
           ​
           <Route
             exact
-            path="/:clubId/book/newbook"
+            path="/:clubId/createbook"
             render={(props) => (
               <CreateBook {...props} postBook={this.postBook} />
             )}

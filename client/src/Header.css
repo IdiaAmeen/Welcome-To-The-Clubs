@@ -46,7 +46,7 @@
     overflow-x: hidden;
   } */
   #logo {
-    height: 240px;
+    height: 230px;
     margin-left: 335px;
     width: 50%;
   }
@@ -69,5 +69,14 @@
   }
   #logout {
     margin-right: 20px;
+    height: 40px;
+  }
+  #logout-button {
+    margin-top: -70px;
+  }
+  .greeting {
+    margin-left: 500px;
+    margin-top: -65px;
+    font-size: 25px;
   }
 }
