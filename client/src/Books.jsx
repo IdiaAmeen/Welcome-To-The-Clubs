@@ -19,20 +19,22 @@ export default function Books(props) {
           </Link>
         )}
       </div>
-      {books.map((book) => (
-        <React.Fragment key={book.title}>
-          <div className="books">
-            <p id="titles">{book.title}</p>
+      <div className="book-desktop">
+        {books.map((book) => (
+          <React.Fragment key={book.title}>
+            <Link to="/" className="books">
+              <p id="titles">{book.title}</p>
 
-            <img src={book.image} alt={book.title} />
-          </div>
-          <div className="viewbook">
-            <Link to={`/${clubId}/book/${book.title}`} className="text">
-              View
+              <img src={book.image} alt={book.title} />
             </Link>
-          </div>
-        </React.Fragment>
-      ))}
+            <div className="viewbook">
+              <Link to={`/${clubId}/book/${book.title}`} className="text">
+                View
+              </Link>
+            </div>
+          </React.Fragment>
+        ))}
+      </div>
     </>
   );
 }
