@@ -19,11 +19,7 @@ export default class Welcome extends Component {
                 src={require("./images/logopurple.png")}
                 alt="Welcome To The Clubs"
               />
-              <p>
-                {" "}
-                Virtual Clubrooms at your fingertips. Register or Sign In to
-                unlock the fun!{" "}
-              </p>
+              <p> Virtual Clubrooms at your fingertips. Join the fun! </p>
               <button onClick={this.handleClick} id="got-it">
                 Got it!
               </button>

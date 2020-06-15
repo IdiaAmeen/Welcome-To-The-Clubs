@@ -5,7 +5,7 @@ import SignIn from "./SignIn";
 // import { Link, NavLink } from 'react-router-dom';
 
 export default function Header(props) {
-  if (props.currentUser === null) {
+  if (props.currentUser === null || props.currentUser === false) {
     return (
       <>
         <div className="header">
@@ -15,7 +15,7 @@ export default function Header(props) {
               alt="Welcome to The Clubs"
               id="logo"
             />
-            <Link to="/signup">
+            <Link to="/join/signup">
               <img
                 src={require("./images/person.png")}
                 alt="profile"

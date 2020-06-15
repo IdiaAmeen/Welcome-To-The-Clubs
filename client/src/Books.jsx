@@ -27,7 +27,7 @@ export default function Books(props) {
             <img src={book.image} alt={book.title} />
           </div>
           <div className="viewbook">
-            <Link to={`/${clubId}/books/${book.title}`} className="text">
+            <Link to={`/${clubId}/book/${book.title}`} className="text">
               View
             </Link>
           </div>

@@ -27,27 +27,26 @@ class ViewBook extends Component {
       this.props.books.find((book) => {
         return this.props.match.params.title === book.title;
       }) || {};
-    if (this.props.currentUser === null) {
-      return <Redirect to={"/"} />;
-    } else {
-      return (
-        <>
-          <div key={bookview.title} className="onebook-view">
-            <img src={bookview.image} alt={bookview.title} id="book-cover" />
-            <h3 id="book-title">{bookview.title}</h3>
 
-            <p>{bookview.author}</p>
-            <p id="description">{bookview.description}</p>
-            <div className="buy">
-              <p id="buy-book">Get Your Copy!</p>
-              <a href={bookview.link}>
-                <img
-                  className="strand"
-                  src={require("./images/strand.png")}
-                  alt="Link to buy"
-                />
-              </a>
-            </div>
+    return (
+      <>
+        <div key={bookview.title} className="onebook-view">
+          <img src={bookview.image} alt={bookview.title} id="book-cover" />
+          <h3 id="book-title">{bookview.title}</h3>
+
+          <p>{bookview.author}</p>
+          <p id="description">{bookview.description}</p>
+          <div className="buy">
+            <p id="buy-book">Get Your Copy!</p>
+            <a href={bookview.link}>
+              <img
+                className="strand"
+                src={require("./images/strand.png")}
+                alt="Link to buy"
+              />
+            </a>
+          </div>
+          {this.props.currentUser && (
             <div className="crud-buttons">
               <Link to={`/:clubId/book/${bookview.id}/edit`}>
                 <button onClick={this.handleEdit} className="edit">
@@ -71,10 +70,10 @@ class ViewBook extends Component {
                 )}
               </div>
             </div>
-          </div>
-        </>
-      );
-    }
+          )}
+        </div>
+      </>
+    );
   }
 }
 const ViewWithRouter = withRouter(ViewBook);
