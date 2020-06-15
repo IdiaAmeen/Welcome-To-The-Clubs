@@ -6,7 +6,26 @@ import SignIn from "./SignIn";
 
 export default function Header(props) {
   if (props.currentUser === null) {
-    return <SignIn />;
+    return (
+      <>
+        <div className="header">
+          <div className="no-user">
+            <img
+              src={require("./images/logowhite1.png")}
+              alt="Welcome to The Clubs"
+              id="logo"
+            />
+            <Link to="/signup">
+              <img
+                src={require("./images/person.png")}
+                alt="profile"
+                id="profile"
+              />
+            </Link>
+          </div>
+        </div>
+      </>
+    );
   } else {
     return (
       <div className="header">
