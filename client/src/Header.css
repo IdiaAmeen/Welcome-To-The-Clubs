@@ -36,3 +36,35 @@
   float: right;
   margin-right: 10px;
 }
+#home-logo {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  #logo {
+    height: 240px;
+    margin-left: 250px;
+    width: 50%;
+  }
+  .header {
+    height: 240px;
+    width: 100%;
+  }
+  #home-logo {
+    display: block;
+    height: 50px;
+    margin-top: -80px;
+    margin-left: 1200px;
+  }
+  #profile {
+    margin-top: 160px;
+    height: 50px;
+  }
+  #home-logo:hover {
+    border: 3px solid black;
+  }
+}

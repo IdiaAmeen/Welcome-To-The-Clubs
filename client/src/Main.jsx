@@ -6,6 +6,7 @@ import ViewBook from "./ViewBook";
 import CreateBook from "./CreateBook";
 import EditBook from "./EditBook";
 import Welcome from "./Welcome";
+import Header from "./Header";
 import { readAllClubs } from "./services/clubs";
 
 import {
@@ -28,6 +29,7 @@ class Main extends Component {
   componentDidMount() {
     this.getClubs();
     this.getBooks();
+    return this.props.currentUser;
   }
   getClubs = async () => {
     const clubs = await readAllClubs();
@@ -62,42 +64,49 @@ class Main extends Component {
   render() {
     return (
       <>
+        <Header
+          currentUser={this.props.currentUser}
+          handleLogout={this.props.handleLogout}
+        />
         <Route path="/" render={() => <Clubs clubs={this.state.clubs} />} />
         <Route exact path="/" render={() => <Welcome />} />
+
         <Route
-          exact
-          path="/:clubId/books"
+          path="/club/:clubId/books"
           render={(props) => <Books {...props} books={this.state.books} />}
         />
+
         <Route
-          path="/:clubId/books/:title"
+          path="/:clubId/book/:title"
           render={(props) => (
             <ViewBook
               {...props}
               books={this.state.books}
               removeBook={this.removeBook}
+              currentUser={this.props.currentUser}
               // putBook={this.putBook}
             />
           )}
         />
+
         <Route
           path="/:clubId/book/newbook"
           render={(props) => <CreateBook {...props} postBook={this.postBook} />}
         />
-        <Route
-          path="/:clubId/book/:id/edit"
-          render={(props) => {
+
+        <Route path="/:clubId/book/:id/edit">
+          render=
+          {(props) => {
             const bookId = props.match.params.id;
             const book = this.state.books.find(
               (book) => book.id === parseInt(bookId)
             );
             return <EditBook {...props} book={book} putBook={this.putBook} />;
           }}
-        />
+        </Route>
       </>
     );
   }
 }
-
 // Link to =`/${clubId}/books/newbook`
 export default withRouter(Main);

@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Route, withRouter } from "react-router-dom";
+import { Route, withRouter, Switch } from "react-router-dom";
 import Main from "./Main";
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
-import Header from "./Header";
+
 import {
   loginUser,
   registerUser,
@@ -49,28 +49,34 @@ class App extends Component {
 
     return (
       <>
-        <Route exact path="/signup">
-          <SignUp
-            handleLoginSubmit={this.handleLoginSubmit}
-            handleSignUpSubmit={this.handleSignUpSubmit}
-            currentUser={this.state.currentUser}
-          />
-        </Route>
-        <Route
-          path="/signin"
-          render={(props) => (
-            <SignIn
-              {...props}
+        <Switch>
+          <Route exact path="/join/signup">
+            <SignUp
               handleLoginSubmit={this.handleLoginSubmit}
+              handleSignUpSubmit={this.handleSignUpSubmit}
               currentUser={this.state.currentUser}
             />
-          )}
-        />
-        <Header
-          currentUser={this.state.currentUser}
-          handleLogout={this.handleLogout}
-        />
-        <Main currentUser={this.state.currentUser} />;
+          </Route>
+          <Route
+            path="/join/signin"
+            render={(props) => (
+              <SignIn
+                {...props}
+                handleLoginSubmit={this.handleLoginSubmit}
+                currentUser={this.state.currentUser}
+              />
+            )}
+          />
+        </Switch>
+        {/* have main and header not render for signup and signin */}
+        <Switch>
+          <Route path="/">
+            <Main
+              currentUser={this.state.currentUser}
+              handleLogout={this.handleLogout}
+            />
+          </Route>
+        </Switch>
       </>
     );
   }

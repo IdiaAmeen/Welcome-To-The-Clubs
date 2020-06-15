@@ -5,21 +5,30 @@ import SignIn from "./SignIn";
 // import { Link, NavLink } from 'react-router-dom';
 
 export default function Header(props) {
-  if (props.currentUser === null) {
+  if (props.currentUser === null || props.currentUser === false) {
     return (
       <>
         <div className="header">
           <div className="no-user">
-            <img
-              src={require("./images/logowhite1.png")}
-              alt="Welcome to The Clubs"
-              id="logo"
-            />
-            <Link to="/signup">
+            <Link to="/">
+              <img
+                src={require("./images/logowhite1.png")}
+                alt="Welcome to The Clubs"
+                id="logo"
+              />
+            </Link>
+            <Link to="/join/signup">
               <img
                 src={require("./images/person.png")}
                 alt="profile"
                 id="profile"
+              />
+            </Link>
+            <Link to="/">
+              <img
+                src={require("./images/homelogo.png")}
+                id="home-logo"
+                alt="home"
               />
             </Link>
           </div>

@@ -39,13 +39,13 @@ class SignUp extends Component {
     const { handleSignUpSubmit, history } = this.props;
     return (
       <>
-        <div className="title">
+        <Link to="/" className="title">
           <img
             src={require("./images/logopurple.png")}
             alt="Welcome to The Clubs"
             id="purple-logo"
           />
-        </div>
+        </Link>
         <div className="page">
           <div className="join-us">Join the Clubs</div>
           <form
@@ -121,7 +121,7 @@ class SignUp extends Component {
             <button className="submit">Submit</button>
           </form>
           <p>Already have an Account?</p>
-          <Link to="/signin" className="link">
+          <Link to="/join/signin" className="link">
             Sign In
           </Link>
         </div>
