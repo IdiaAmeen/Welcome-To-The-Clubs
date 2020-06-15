@@ -77,10 +77,10 @@ h2 {
   .book-desktop {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-
-    /* height: 350px;
-    width: 350px; */
+    overflow-x: scroll;
+    height: 500px;
+    border: none;
+    margin-top: -10px;
   }
   .viewbook {
     display: none;
@@ -90,6 +90,11 @@ h2 {
     display: block;
     flex: 1 1 0px;
     transition: transform 500ms;
+    padding-right: 5px;
+    padding-top: 5px;
+    height: 275px;
+    margin-top: 15px;
+    width: 350px;
   }
   body {
     overflow: hidden;
@@ -101,5 +106,13 @@ h2 {
   }
   .book-club {
     margin-left: 600px;
+  }
+  .books img {
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  #titles {
+    height: 20px;
+    padding-bottom: 10px;
   }
 }

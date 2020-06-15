@@ -22,7 +22,7 @@ export default function Books(props) {
       <div className="book-desktop">
         {books.map((book) => (
           <React.Fragment key={book.title}>
-            <Link to="/" className="books">
+            <Link to={`/${clubId}/book/${book.title}`} className="books">
               <p id="titles">{book.title}</p>
 
               <img src={book.image} alt={book.title} />
