@@ -2,7 +2,15 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import "./DeleteBook.css";
 function DeleteBook(props) {
-  const { display, bookViewId, handleClick, removeBook, bookView } = props;
+  const {
+    display,
+    bookViewId,
+    handleClick,
+    removeBook,
+    bookView,
+    history,
+    clubId,
+  } = props;
 
   if (display === true) {
     return (
@@ -16,6 +24,7 @@ function DeleteBook(props) {
                 className="deletebuttons"
                 onClick={() => {
                   removeBook(bookViewId);
+                  history.push(`club/${clubId}/books`);
                 }}
               >
                 Delete

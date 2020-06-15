@@ -53,3 +53,14 @@ h3 {
 #description {
   height: 100px;
 }
+@media (min-width: 992px) {
+  .onebook-view {
+    border: none;
+    display: flex;
+    flex-direction: column;
+  }
+  #book-cover {
+    width: 550px;
+    height: 370px;
+  }
+}

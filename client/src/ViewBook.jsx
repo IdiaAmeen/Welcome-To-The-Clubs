@@ -48,7 +48,7 @@ class ViewBook extends Component {
           </div>
           {this.props.currentUser && (
             <div className="crud-buttons">
-              <Link to={`/:clubId/book/${bookview.id}/edit`}>
+              <Link to={`/:clubId/${bookview.id}/edit`}>
                 <button onClick={this.handleEdit} className="edit">
                   Edit
                 </button>
@@ -66,6 +66,8 @@ class ViewBook extends Component {
                     handleClick={this.handleClick}
                     bookView={bookview}
                     removeBook={this.props.removeBook}
+                    history={this.props.history}
+                    clubId={this.props.clubId}
                   />
                 )}
               </div>
