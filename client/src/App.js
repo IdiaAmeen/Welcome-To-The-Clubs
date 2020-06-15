@@ -46,40 +46,33 @@ class App extends Component {
   };
   render() {
     console.log(this.state.currentUser);
-    if (this.state.currentUser == null) {
-      return (
-        <>
-          <Route exact path="/">
-            <SignUp
+
+    return (
+      <>
+        <Route exact path="/signup">
+          <SignUp
+            handleLoginSubmit={this.handleLoginSubmit}
+            handleSignUpSubmit={this.handleSignUpSubmit}
+            currentUser={this.state.currentUser}
+          />
+        </Route>
+        <Route
+          path="/signin"
+          render={(props) => (
+            <SignIn
+              {...props}
               handleLoginSubmit={this.handleLoginSubmit}
-              handleSignUpSubmit={this.handleSignUpSubmit}
               currentUser={this.state.currentUser}
             />
-          </Route>
-
-          <Route
-            path="/signin"
-            render={(props) => (
-              <SignIn
-                {...props}
-                handleLoginSubmit={this.handleLoginSubmit}
-                currentUser={this.state.currentUser}
-              />
-            )}
-          />
-        </>
-      );
-    } else {
-      return (
-        <>
-          <Header
-            currentUser={this.state.currentUser}
-            handleLogout={this.handleLogout}
-          />
-          <Main currentUser={this.state.currentUser} />;
-        </>
-      );
-    }
+          )}
+        />
+        <Header
+          currentUser={this.state.currentUser}
+          handleLogout={this.handleLogout}
+        />
+        <Main currentUser={this.state.currentUser} />;
+      </>
+    );
   }
 }
 export default withRouter(App);

@@ -30,3 +30,9 @@
 #logout {
   height: 35px;
 }
+
+#profile {
+  height: 55px;
+  float: right;
+  margin-right: 10px;
+}
