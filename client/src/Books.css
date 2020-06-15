@@ -14,6 +14,7 @@ body {
   margin-bottom: 5px;
   font-size: 20px;
   margin-top: 20px;
+  text-decoration: none;
 }
 .books img {
   height: 75%;
@@ -62,4 +63,43 @@ h2 {
   margin-right: 15px;
   margin-top: -45px;
   margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  .book-desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* height: 350px;
+    width: 350px; */
+  }
+  .viewbook {
+    display: none;
+  }
+  .books {
+    position: relative;
+    display: block;
+    flex: 1 1 0px;
+    transition: transform 500ms;
+  }
+  body {
+    overflow: hidden;
+  }
+  .book-desktop .books:focus,
+  .book-desktop .books:hover {
+    transform: scale(1.5);
+    z-index: 1;
+  }
+  .book-club {
+    margin-left: 600px;
+  }
 }

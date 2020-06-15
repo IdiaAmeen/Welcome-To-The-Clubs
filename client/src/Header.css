@@ -40,7 +40,7 @@
   display: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 764px) {
   /* body {
     max-width: 100%;
     overflow-x: hidden;
@@ -58,11 +58,16 @@
   #home-logo {
     display: block;
     height: 50px;
-    margin-top: -80px;
-    margin-left: 1200px;
+    margin-top: -82px;
+    /* margin-left: 1200px; */
+    float: right;
+    margin-right: 70px;
   }
   #profile {
     margin-top: 160px;
     height: 50px;
+  }
+  #logout {
+    margin-right: 20px;
   }
 }
