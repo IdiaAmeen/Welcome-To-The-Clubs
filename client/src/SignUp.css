@@ -90,3 +90,14 @@ p {
 #eye {
   height: 40px;
 }
+
+@media (min-width: 992px) {
+  .page {
+    width: 1200px;
+    margin-left: 70px;
+  }
+  #purple-logo {
+    width: 100vw;
+    height: 160px;
+  }
+}
