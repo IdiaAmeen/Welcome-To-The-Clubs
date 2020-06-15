@@ -21,17 +21,14 @@ class App extends Component {
   componentDidMount() {
     this.handleVerify();
   }
-
   handleLoginSubmit = async (loginData) => {
     const currentUser = await loginUser(loginData);
     this.setState({ currentUser });
   };
-
   handleSignUpSubmit = async (registerData) => {
     const currentUser = await registerUser(registerData);
     this.setState({ currentUser });
   };
-
   handleLogout = () => {
     this.setState({
       currentUser: null,
@@ -39,14 +36,12 @@ class App extends Component {
     localStorage.clear();
     removeToken();
   };
-
   handleVerify = async () => {
     const currentUser = await verifyUser();
     this.setState({ currentUser });
   };
   render() {
     console.log(this.state.currentUser);
-
     return (
       <>
         <Switch>
@@ -58,6 +53,7 @@ class App extends Component {
             />
           </Route>
           <Route
+            exact
             path="/join/signin"
             render={(props) => (
               <SignIn
@@ -67,9 +63,6 @@ class App extends Component {
               />
             )}
           />
-        </Switch>
-        {/* have main and header not render for signup and signin */}
-        <Switch>
           <Route path="/">
             <Main
               currentUser={this.state.currentUser}
