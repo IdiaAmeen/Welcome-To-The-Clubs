@@ -12,7 +12,7 @@ export default function Header(props) {
           <div className="no-user">
             <Link to="/">
               <img
-                src={require("./images/logowhite1.png")}
+                src={require("./images/logowhite.png")}
                 alt="Welcome to The Clubs"
                 id="logo"
               />
@@ -22,13 +22,6 @@ export default function Header(props) {
                 src={require("./images/person.png")}
                 alt="profile"
                 id="profile"
-              />
-            </Link>
-            <Link to="/">
-              <img
-                src={require("./images/homelogo.png")}
-                id="home-logo"
-                alt="home"
               />
             </Link>
           </div>
@@ -41,7 +34,7 @@ export default function Header(props) {
         <div className="site-name">
           <Link to="/">
             <img
-              src={require("./images/logowhite1.png")}
+              src={require("./images/logowhite.png")}
               alt="Welcome to The Clubs"
               id="logo"
             />

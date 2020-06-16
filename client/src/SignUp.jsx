@@ -28,24 +28,10 @@ class SignUp extends Component {
   };
 
   render() {
-    const {
-      username,
-      email,
-      password,
-      verifyPassword,
-      error,
-      hidden,
-    } = this.state;
+    const { username, email, password, verifyPassword } = this.state;
     const { handleSignUpSubmit, history } = this.props;
     return (
       <>
-        <Link to="/" className="title">
-          <img
-            src={require("./images/logopurple.png")}
-            alt="Welcome to The Clubs"
-            id="purple-logo"
-          />
-        </Link>
         <div className="page">
           <div className="join-us">Join the Clubs</div>
           <form
