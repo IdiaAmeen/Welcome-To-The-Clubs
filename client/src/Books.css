@@ -24,7 +24,7 @@ body {
   padding-bottom: 29px;
   margin-bottom: 5px;
 }
-p {
+#titles {
   margin-left: 60px;
   font-family: "Montserrat", sans-serif;
   height: 20px;
@@ -91,7 +91,7 @@ h2 {
   }
   .books {
     position: relative;
-    display: block;
+    display: flex;
     flex: 1 1 0px;
     transition: transform 500ms;
     padding-right: 5px;
@@ -99,6 +99,7 @@ h2 {
     height: 275px;
     margin-top: 15px;
     width: 350px;
+    flex-direction: column;
   }
   body {
     overflow: hidden;
