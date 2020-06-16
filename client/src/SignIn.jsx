@@ -14,7 +14,6 @@ export default class SignIn extends Component {
   };
 
   render() {
-    console.log(this.props);
     const { username, password } = this.state;
     const { handleLoginSubmit, history } = this.props;
     return (

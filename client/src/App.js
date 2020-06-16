@@ -39,7 +39,6 @@ class App extends Component {
     this.setState({ currentUser });
   };
   render() {
-    console.log(this.state.currentUser);
     return (
       <>
         <Main

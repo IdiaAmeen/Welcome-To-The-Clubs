@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const baseUrl = "https://calm-harbor-04850.herokuapp.com/";
+const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://welcomeclubs-api.herokuapp.com/"
+    : "http://localhost:3000";
 
 const api = axios.create({
   baseURL: baseUrl,
