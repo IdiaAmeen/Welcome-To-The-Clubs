@@ -8,7 +8,8 @@ import EditBook from "./EditBook";
 import Welcome from "./Welcome";
 import Header from "./Header";
 import { readAllClubs } from "./services/clubs";
-
+import SignUp from "./SignUp";
+import SignIn from "./SignIn";
 import {
   readAllBooks,
   createBook,
@@ -43,7 +44,6 @@ class Main extends Component {
     this.setState((prevState) => ({
       books: prevState.books.filter((books) => books.id !== bookId),
     }));
-    this.props.history.push(`/:clubId/books`);
   };
   postBook = async (bookData, clubId) => {
     const newBook = await createBook(bookData, clubId);
@@ -60,8 +60,6 @@ class Main extends Component {
     }));
   };
   render() {
-    const bookId = this.props.match.params.id;
-    const book = this.state.books.find((book) => book.id === parseInt(bookId));
     return (
       <>
         <Header
@@ -74,8 +72,25 @@ class Main extends Component {
             path="/"
             render={() => <Clubs clubs={this.state.clubs} />}
           />
-          {/* <Route exact path="/" render={() => <Welcome />} /> */}
-          ​
+          {/* <Route exact path="/" render={() => <Welcome />} /> */}​
+          <Route exact path="/join/signup">
+            <SignUp
+              handleLoginSubmit={this.props.handleLoginSubmit}
+              handleSignUpSubmit={this.props.handleSignUpSubmit}
+              currentUser={this.props.currentUser}
+            />
+          </Route>
+          <Route
+            exact
+            path="/join/signin"
+            render={(props) => (
+              <SignIn
+                {...props}
+                handleLoginSubmit={this.props.handleLoginSubmit}
+                currentUser={this.props.currentUser}
+              />
+            )}
+          />
           <Route
             path="/club/:clubId/books"
             render={(props) => (
@@ -112,9 +127,15 @@ class Main extends Component {
           ​
           <Route
             exact
-            path="/:clubId/:id/edit"
+            path="/:id/edit"
             render={(props) => (
-              <EditBook {...props} book={book} putBook={this.putBook} />
+              <EditBook
+                {...props}
+                book={this.state.books.find(
+                  (book) => book.id === parseInt(props.match.params.id)
+                )}
+                putBook={this.putBook}
+              />
             )}
           />
         </Switch>

@@ -24,7 +24,7 @@ function DeleteBook(props) {
                 className="deletebuttons"
                 onClick={() => {
                   removeBook(bookViewId);
-                  history.push(`club/${clubId}/books`);
+                  history.push(`/club/${clubId}/books`);
                 }}
               >
                 Delete

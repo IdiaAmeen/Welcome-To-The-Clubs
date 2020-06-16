@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { Route, withRouter, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Main from "./Main";
-import SignUp from "./SignUp";
-import SignIn from "./SignIn";
 
 import {
   loginUser,
@@ -44,34 +42,14 @@ class App extends Component {
     console.log(this.state.currentUser);
     return (
       <>
-        <Switch>
-          <Route exact path="/join/signup">
-            <SignUp
-              handleLoginSubmit={this.handleLoginSubmit}
-              handleSignUpSubmit={this.handleSignUpSubmit}
-              currentUser={this.state.currentUser}
-            />
-          </Route>
-          <Route
-            exact
-            path="/join/signin"
-            render={(props) => (
-              <SignIn
-                {...props}
-                handleLoginSubmit={this.handleLoginSubmit}
-                currentUser={this.state.currentUser}
-              />
-            )}
-          />
-          <Route path="/">
-            <Main
-              currentUser={this.state.currentUser}
-              handleLogout={this.handleLogout}
-            />
-          </Route>
-        </Switch>
+        <Main
+          handleLoginSubmit={this.handleLoginSubmit}
+          handleSignUpSubmit={this.handleSignUpSubmit}
+          currentUser={this.state.currentUser}
+          handleLogout={this.handleLogout}
+        />
       </>
     );
   }
 }
-export default withRouter(App);
+export default App;

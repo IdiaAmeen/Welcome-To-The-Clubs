@@ -48,7 +48,7 @@ class ViewBook extends Component {
           </div>
           {this.props.currentUser && (
             <div className="crud-buttons">
-              <Link to={`/:clubId/${bookview.id}/edit`}>
+              <Link to={`/${bookview.id}/edit`}>
                 <button onClick={this.handleEdit} className="edit">
                   Edit
                 </button>
