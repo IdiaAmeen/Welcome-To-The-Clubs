@@ -8,7 +8,7 @@ export default function Books(props) {
   return (
     <>
       <div className="book-club">
-        <h2>The Book Club</h2>
+        <h2 id="book-club">The Book Club</h2>
         {currentUser && (
           <Link to={`/${clubId}/createbook`}>
             <img

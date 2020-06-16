@@ -38,7 +38,6 @@
 }
 .crud-buttons {
   margin-top: 35px;
-  /* margin-right: 50px; */
 }
 #buy-book {
   font-family: "Montserrat", sans-serif;
@@ -78,5 +77,8 @@
   .buy {
     margin-left: 700px;
     margin-top: -20px;
+  }
+  .crud-buttons {
+    margin-left: 700px;
   }
 }

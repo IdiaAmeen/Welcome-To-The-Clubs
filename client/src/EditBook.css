@@ -45,3 +45,25 @@
 #book-title {
   height: 45px;
 }
+@media (min-width: 770px) {
+  .edit-page {
+    margin-left: 60px;
+    margin-top: 60px;
+    border: 3px solid #9370db;
+  }
+  #edit-text {
+    width: 80%;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  #edit-submit {
+  }
+  .text-inputs {
+    margin-left: 125px;
+  }
+
+  #edit-submit {
+    margin-left: 450px;
+  }
+}

@@ -54,48 +54,45 @@ class EditBook extends Component {
           }}
         >
           <h3 id="edit-book">Edit Book</h3>
-
-          <label htmlFor="title">Title:</label>
-          <input
-            id="edit-text"
-            type="text"
-            value={title}
-            name="title"
-            placeholder={book}
-            onChange={this.handleChange}
-          />
-          <label htmlFor="author">Author:</label>
-          <input
-            id="edit-text"
-            type="text"
-            value={author}
-            name="author"
-            onChange={this.handleChange}
-          />
-          <label htmlFor="description">Description:</label>
-          <input
-            id="edit-text"
-            type="text"
-            value={description}
-            name="description"
-            onChange={this.handleChange}
-          />
-          <label htmlFor="image">Image:</label>
-          <input
-            id="edit-text"
-            type="text"
-            value={image}
-            name="image"
-            onChange={this.handleChange}
-          />
-          <label htmlFor="link">Link:</label>
-          <input
-            id="edit-text"
-            type="text"
-            value={link}
-            name="link"
-            onChange={this.handleChange}
-          />
+          <div className="text-inputs">
+            <input
+              id="edit-text"
+              type="text"
+              value={title}
+              name="title"
+              placeholder={book}
+              onChange={this.handleChange}
+            />
+            <input
+              id="edit-text"
+              type="text"
+              value={author}
+              name="author"
+              onChange={this.handleChange}
+            />
+            <input
+              id="edit-text"
+              type="text"
+              value={description}
+              name="description"
+              onChange={this.handleChange}
+            />
+            <label htmlFor="image">Image:</label>
+            <input
+              id="edit-text"
+              type="text"
+              value={image}
+              name="image"
+              onChange={this.handleChange}
+            />
+            <input
+              id="edit-text"
+              type="text"
+              value={link}
+              name="link"
+              onChange={this.handleChange}
+            />{" "}
+          </div>
           <button id="edit-submit">Submit</button>
           <button
             id="cancel"
