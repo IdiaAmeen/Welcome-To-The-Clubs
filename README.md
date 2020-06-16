@@ -214,9 +214,28 @@ src
 ***
 
 ## Code Showcase
-
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
-
+```
+<div className="outer-modal">
+          <div className="inner-modal">
+            <h3 id="sure">Are you sure you want to delete {bookView.title}?</h3>
+            <img src={bookView.image} alt={bookView.title} id="image" />
+            <div className="options">
+              <button
+                className="deletebuttons"
+                onClick={() => {
+                  removeBook(bookViewId);
+                  history.push(`/club/${clubId}/books`);
+                }}
+              >
+                Delete
+              </button>
+              <button className="deletebuttons" onClick={handleClick}>
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+```
 ## Code Issues & Resolutions
 
 > Use this section to list of all major issues encountered and their resolution, if you'd like.
