@@ -19,14 +19,6 @@ export default class SignIn extends Component {
     const { handleLoginSubmit, history } = this.props;
     return (
       <>
-        <div className="title">
-          <img
-            src={require("./images/logopurple.png")}
-            alt="Welcome to The Clubs"
-            id="purple-logo"
-          />
-        </div>
-
         <div className="this-page">
           <div className="return">
             <h3 id="welcome">Welcome Back!</h3>
