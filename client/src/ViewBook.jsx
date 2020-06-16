@@ -34,7 +34,7 @@ class ViewBook extends Component {
           <img src={bookview.image} alt={bookview.title} id="book-cover" />
           <h3 id="book-title">{bookview.title}</h3>
 
-          <p>{bookview.author}</p>
+          <p id="author">{bookview.author}</p>
           <p id="description">{bookview.description}</p>
           <div className="buy">
             <p id="buy-book">Get Your Copy!</p>
@@ -80,17 +80,3 @@ class ViewBook extends Component {
 }
 const ViewWithRouter = withRouter(ViewBook);
 export default ViewWithRouter;
-{
-  /* <Route
-path="/:clubId/books/:title/edit"
-render={(props) => {
-  const bookId = this.props.match.params.title;
-  const book = this.state.books.find((book) => book.title === bookId);
-  return (
-    <EditBook
-      {...props}
-      book={book}
-      putBook={this.putBook}
-      bookId={bookId}
-    /> */
-}

@@ -60,7 +60,23 @@
     flex-direction: column;
   }
   #book-cover {
-    width: 550px;
-    height: 370px;
+    width: 450px;
+    height: 250px;
+  }
+  #book-title {
+    margin-top: -250px;
+    font-size: 40px;
+    margin-left: 720px;
+  }
+  #description {
+    margin-left: 500px;
+  }
+  #author {
+    font-size: 20px;
+    margin-left: 840px;
+  }
+  .buy {
+    margin-left: 700px;
+    margin-top: -20px;
   }
 }
