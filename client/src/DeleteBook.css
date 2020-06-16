@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,300&display=swap");
 .outer-modal {
   display: flex;
   justify-content: center;
@@ -25,7 +26,7 @@
   bottom: 25%;
   border-radius: 21.7px;
   z-index: 1;
-  font-family: Rubik, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   border: 5px solid #9370db;
 }
@@ -49,4 +50,12 @@ button {
 .options {
   display: flex;
   flex-direction: row;
+}
+
+@media (min-width: 992px) {
+  #sure {
+    color: white;
+    font-weight: 200;
+    margin-left: 13px;
+  }
 }

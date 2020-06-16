@@ -43,7 +43,6 @@ body {
   margin-left: 150px;
   height: 25px;
   width: 85px;
-  /* margin-bottom: 100px; */
 }
 a.text {
   text-decoration: none;
@@ -66,7 +65,6 @@ a.text {
   margin-left: 18px;
 
   margin-bottom: 10px;
-  /* border: 1px solid red; */
 }
 
 @media (min-width: 992px) {

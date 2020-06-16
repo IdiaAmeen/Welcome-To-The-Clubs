@@ -41,10 +41,6 @@
 }
 
 @media (min-width: 770px) {
-  /* body {
-    max-width: 100%;
-    overflow-x: hidden;
-  } */
   #logo {
     height: 230px;
     margin-left: 335px;
@@ -53,13 +49,12 @@
   .header {
     height: 240px;
     width: 100%;
-    /* position: fixed; */
   }
   #home-logo {
     display: block;
     height: 50px;
     margin-top: -82px;
-    /* margin-left: 1200px; */
+
     float: right;
     margin-right: 70px;
   }

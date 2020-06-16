@@ -1,6 +1,6 @@
 import React from "react";
 import "./Books.css";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function Books(props) {
   const { books, currentUser } = props;
   const { clubId } = props.match.params;

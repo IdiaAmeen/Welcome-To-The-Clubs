@@ -5,7 +5,6 @@ import Clubs from "./Clubs";
 import ViewBook from "./ViewBook";
 import CreateBook from "./CreateBook";
 import EditBook from "./EditBook";
-import Welcome from "./Welcome";
 import Header from "./Header";
 import { readAllClubs } from "./services/clubs";
 import SignUp from "./SignUp";
@@ -23,7 +22,6 @@ class Main extends Component {
     this.state = {
       clubs: [],
       books: [],
-      // book: [],
     };
   }
   componentDidMount() {
@@ -72,7 +70,6 @@ class Main extends Component {
             path="/"
             render={() => <Clubs clubs={this.state.clubs} />}
           />
-          {/* <Route exact path="/" render={() => <Welcome />} /> */}​
           <Route exact path="/join/signup">
             <SignUp
               handleLoginSubmit={this.props.handleLoginSubmit}
@@ -112,7 +109,6 @@ class Main extends Component {
                 removeBook={this.removeBook}
                 currentUser={this.props.currentUser}
                 clubId={this.props.clubId}
-                // putBook={this.putBook}
               />
             )}
           />
@@ -143,5 +139,5 @@ class Main extends Component {
     );
   }
 }
-// Link to =`/${clubId}/books/newbook`
+
 export default withRouter(Main);

@@ -1,8 +1,6 @@
 import React from "react";
 import { Redirect, Link } from "react-router-dom";
 import "./Header.css";
-import SignIn from "./SignIn";
-// import { Link, NavLink } from 'react-router-dom';
 
 export default function Header(props) {
   if (props.currentUser === null || props.currentUser === false) {

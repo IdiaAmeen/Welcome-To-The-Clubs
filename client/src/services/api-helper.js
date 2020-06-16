@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:3000";
+const baseUrl = "https://murmuring-wildwood-16683.herokuapp.com/";
 
 const api = axios.create({
   baseURL: baseUrl,

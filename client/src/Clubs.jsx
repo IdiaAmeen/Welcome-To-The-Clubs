@@ -1,8 +1,8 @@
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Clubs.css";
 export default function Clubs(props) {
-  const { clubs, currentUser } = props;
+  const { clubs } = props;
 
   return (
     <div className="club-boxes">
