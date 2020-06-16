@@ -59,3 +59,25 @@
   margin-top: 2px;
   font-family: "Montserrat", sans-serif;
 }
+@media (min-width: 992px) {
+  #welcome {
+    font-size: 35px;
+    color: #9370db;
+    margin-left: 450px;
+  }
+  .login-credentials {
+    margin-left: 155px;
+  }
+  #username {
+    margin-left: 50px;
+  }
+  #sign-password {
+    margin-top: 15px;
+    margin-left: 50px;
+  }
+  .signin-submit {
+    height: 55px;
+    margin-left: 480px;
+    margin-top: 25px;
+  }
+}

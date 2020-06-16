@@ -35,7 +35,6 @@ export default class SignIn extends Component {
                 });
               }}
             >
-              {/* <h3>Login</h3> */}
               <label htmlFor="username">
                 <input
                   id="username"
