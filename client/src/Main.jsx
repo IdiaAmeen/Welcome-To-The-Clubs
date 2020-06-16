@@ -20,6 +20,7 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isLoading: true,
       clubs: [],
       books: [],
     };
@@ -27,6 +28,7 @@ class Main extends Component {
   componentDidMount() {
     this.getClubs();
     this.getBooks();
+    this.setState({ isLoading: false });
     return this.props.currentUser;
   }
   getClubs = async () => {
@@ -64,6 +66,9 @@ class Main extends Component {
           currentUser={this.props.currentUser}
           handleLogout={this.props.handleLogout}
         />
+        {this.state.isLoading && (
+          <img src={require("./images/loading.png")} alt="loading" />
+        )}
         <Switch>
           <Route
             exact

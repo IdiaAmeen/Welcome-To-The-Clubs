@@ -28,7 +28,7 @@ export default class CreateBook extends Component {
         onSubmit={(e) => {
           e.preventDefault();
           postBook(this.state, clubId);
-          history.push(`club/${clubId}/books`);
+          history.push(`/club/${clubId}/books`);
           this.setState({
             title: "",
             author: "",

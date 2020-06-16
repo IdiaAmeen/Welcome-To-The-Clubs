@@ -45,6 +45,7 @@ button {
 }
 #sure {
   padding-left: 10px;
+  color: white;
 }
 
 .options {
@@ -54,7 +55,6 @@ button {
 
 @media (min-width: 992px) {
   #sure {
-    color: white;
     font-weight: 200;
     margin-left: 13px;
   }
