@@ -1,6 +1,6 @@
 # Welcome-To-The-Clubs
 
-welcome-totheclubs.surge.sh
+welcome-tothe-clubs.surge.sh
 <br>
 
 ## Overview
@@ -175,19 +175,19 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Set Up Seed With Data   |    H    |     5 hrs      |     TBD    |        |
-| Create CRUD Actions |    H     |     5 hrs      |    TBD     |         |
-| Authentication    |   H     |     5 hrs      |   TBD     |      |
-| Controllers  |    H     |     3 hrs      |     TBD     |          |
-| Verify Back End works  |    H     |     3 hrs      |     TBD     |        |
-| Front End Services |    H     |     5 hrs      |    TBD     |        |
-| Front End Auth    |   H    |     5 hrs      |  TBD     |       |
-| Components|    H     |     16 hrs      |     TBD     |         |
-| CSS    |    H    |     5 hrs      |    TBD     |       |
-| Media Quieres |    H     |     3 hrs      |     TBD     |         |
-| Debug    |    H     |     3 hrs      |    TBD     |        |
-| Deploy |    H     |     3 hrs      |     TBD    |       |
-| TOTAL               |          |     56 hrs      |         |          |
+| Set Up Seed With Data   |    H    |     5 hrs      |     TBD    | .25       |
+| Create CRUD Actions |    H     |     5 hrs      |    TBD     |  8      |
+| Authentication    |   H     |     5 hrs      |   TBD     |   3   |
+| Controllers  |    H     |     3 hrs      |     TBD     |      1   |
+| Verify Back End works  |    H     |     3 hrs      |     TBD     |    .25    |
+| Front End Services |    H     |     5 hrs      |    TBD     |   3     |
+| Front End Auth    |   H    |     5 hrs      |  TBD     | 4      |
+| Components|    H     |     16 hrs      |     TBD     |   8      |
+| CSS    |    H    |     5 hrs      |    TBD     |   8    |
+| Media Quieres |    H     |     3 hrs      |     TBD     |  8       |
+| Debug    |    H     |     3 hrs      |    TBD     |  1      |
+| Deploy |    H     |     3 hrs      |     TBD    |    .25   |
+| TOTAL               |          |     56 hrs      |         |   44.75     |
 
 
 
@@ -214,9 +214,28 @@ src
 ***
 
 ## Code Showcase
-
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
-
+```
+<div className="outer-modal">
+          <div className="inner-modal">
+            <h3 id="sure">Are you sure you want to delete {bookView.title}?</h3>
+            <img src={bookView.image} alt={bookView.title} id="image" />
+            <div className="options">
+              <button
+                className="deletebuttons"
+                onClick={() => {
+                  removeBook(bookViewId);
+                  history.push(`/club/${clubId}/books`);
+                }}
+              >
+                Delete
+              </button>
+              <button className="deletebuttons" onClick={handleClick}>
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+```
 ## Code Issues & Resolutions
 
 > Use this section to list of all major issues encountered and their resolution, if you'd like.
