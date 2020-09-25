@@ -12,7 +12,7 @@ export default function Books(props) {
         {currentUser && (
           <Link to={`/${clubId}/createbook`}>
             <img
-              src={require("./images/addbook.png")}
+              src={require("../images/addbook.png")}
               alt="Add Book"
               id="add-book"
             />

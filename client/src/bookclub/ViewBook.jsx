@@ -41,7 +41,7 @@ class ViewBook extends Component {
             <a href={bookview.link}>
               <img
                 className="strand"
-                src={require("./images/strand.png")}
+                src={require("../images/strand.png")}
                 alt="Link to buy"
               />
             </a>

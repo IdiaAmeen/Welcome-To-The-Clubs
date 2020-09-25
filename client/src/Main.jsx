@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Route, withRouter, Redirect, Switch } from "react-router-dom";
-import Books from "./Books";
+import Books from "./bookclub/Books";
 import Clubs from "./Clubs";
-import ViewBook from "./ViewBook";
-import CreateBook from "./CreateBook";
-import EditBook from "./EditBook";
+import ViewBook from "./bookclub/ViewBook";
+import CreateBook from "./bookclub/CreateBook";
+import EditBook from "./bookclub/EditBook";
 import Header from "./Header";
 import { readAllClubs } from "./services/clubs";
-import SignUp from "./SignUp";
-import SignIn from "./SignIn";
+import SignUp from "./auth/SignUp";
+import SignIn from "./auth/SignIn";
 import {
   readAllBooks,
   createBook,

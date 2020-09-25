@@ -95,7 +95,7 @@ class SignUp extends Component {
               <button onClick={this.handleView} id="eye-container">
                 {" "}
                 <img
-                  src={require("./images/eye1.png")}
+                  src={require("../images/eye1.png")}
                   alt="See Password"
                   id="eye"
                 />{" "}

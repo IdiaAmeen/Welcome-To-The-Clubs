@@ -97,7 +97,7 @@ class EditBook extends Component {
           <button
             id="cancel"
             onClick={() => {
-              history.push("/club/:clubId/books");
+              history.push("/:clubId/books/:title");
             }}
           >
             Cancel
